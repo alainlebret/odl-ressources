@@ -1,4 +1,4 @@
-# About the "exemplier" sub-repository / À propos de l'exemplier ODL #
+## Exemplier ODL ##
                                              
 This sub-repository contains some programming examples used in my course at the ENSICAEN, France, 2016.
                                              
