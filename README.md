@@ -1,4 +1,4 @@
-## Introduction aux bases de données
+## Outils de développement logiciel
 
 L'ensemble des documents proviennent du cours d'outils de développement logiciel présenté depuis 2016 aux étudiants de la spécialité "Informatique" de l'[ENSICAEN](http://www.ensicaen.fr).
 
