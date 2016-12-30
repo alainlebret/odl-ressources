@@ -12,7 +12,7 @@ L'ensemble des documents proviennent du cours d'outils de développement logicie
 
 ## Software Development Tools
 
-All the documents come from the my course presented since 2016 at the [ENSICAEN](http://www.ensicaen.fr).
+All the documents come from my course presented since 2016 at the [ENSICAEN](http://www.ensicaen.fr).
 
 ### Licensing
 
