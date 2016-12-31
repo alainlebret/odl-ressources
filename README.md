@@ -6,7 +6,7 @@ L'ensemble des documents proviennent du cours d'outils de développement logicie
 
 * Les documents (cours, sujets de travaux pratiques et images) sont fournis sous licence Creative Commons [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). 
 
-* Les éléments de solutions et les exemples de code sont quant à eux proposés sous licence [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+* Les éléments de solutions et les exemples de code sont quant à eux proposés sous licence [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 -----
 
@@ -18,4 +18,4 @@ All the documents come from my course presented since 2016 at the [ENSICAEN](htt
 
 * The documents (courses, laboratory work handouts and images) are provided under the Creative Commons [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license. 
 
-* The code samples are licensed under the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license.
+* The code samples are licensed under the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
