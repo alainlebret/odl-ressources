@@ -6,7 +6,7 @@ L'ensemble des documents proviennent du cours d'outils de développement logicie
 
 * Les documents (cours, sujets de travaux pratiques et images) sont fournis sous licence Creative Commons [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/) 
 
-* Les éléments de solutions et exemples de code sont quant à eux diffusés sous licence [CeCILL-B](http://www.cecill.info/licences/Licence_CeCILL-B_V1-fr.html) [![License](https://img.shields.io/badge/license-CeCILL--B-blue.svg)](http://www.cecill.info/licences/Licence_CeCILL-B_V1-fr.html)
+* Les éléments de solutions et exemples de code sont quant à eux diffusés sous licence [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0) [![License](https://img.shields.io/hexpm/l/plug.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 -----
 
