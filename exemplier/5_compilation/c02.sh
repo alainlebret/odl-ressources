@@ -14,4 +14,4 @@
 #
 
 echo "Compile with warnings and ANSI normalisation..."
-gcc -Wall -Wextra -ansi test01.c
+gcc -Wall -Wextra -ansi test01a.c

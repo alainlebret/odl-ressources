@@ -14,4 +14,4 @@
 #
 
 echo "Compile with warnings..."
-gcc -Wall -Wextra test01.c
+gcc -Wall -Wextra test01a.c

@@ -14,4 +14,4 @@
 #
 
 echo "Compile with warnings, ANSI normalisation and pedantic..."
-gcc -Wall -Wextra -ansi -pedantic test01.c
+gcc -Wall -Wextra -ansi -pedantic test01a.c
