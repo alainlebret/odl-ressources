@@ -22,7 +22,7 @@
  *
  * A Testing program to highlight the use of precompiler options: \c -Wall,
  * \c -Wextra, \c -ansi and \c -pedantic.
- * Compile without or with the gcc option "-D INCLUSION" to show or not the
+ * Compile without or with the gcc option "-DINCLUSION" to show or not the
  * warning messages.
  */
 
