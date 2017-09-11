@@ -34,7 +34,7 @@
 int main(void) {
 	int voting_age;
 
-	voting_age = 18;
+	voting_age = 18; // Not valid in Japan
 	printf("Voting age in France is: %d\n", voting_age);
 
 	exit(EXIT_SUCCESS);
