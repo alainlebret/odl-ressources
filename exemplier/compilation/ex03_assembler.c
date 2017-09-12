@@ -8,7 +8,7 @@
  *
  * Chapter "Compilation" / Chapitre "Compilation"
  *
- * Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
+ * Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 
