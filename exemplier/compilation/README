@@ -18,4 +18,5 @@ These examples highlight the compilation steps:
 - traducing
 - optimizing
 - assembling
-- Linking
+- linking
+as libraries compilation.
