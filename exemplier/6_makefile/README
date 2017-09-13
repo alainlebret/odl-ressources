@@ -126,7 +126,7 @@ subdirectories as below:
     |           ./l ------
     |           |         | l.h
     |           ./m ------
-    |		       |         | m.h
+    |		|         | m.h
     |
     ./src ------
     |           | main.c
