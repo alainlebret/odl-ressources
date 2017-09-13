@@ -1,3 +1,4 @@
+#!/bin/bash
 doxygen -g
 emacs Doxyfile
 mv Doxyfile maconfig
