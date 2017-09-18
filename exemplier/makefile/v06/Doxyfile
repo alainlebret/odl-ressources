@@ -1,0 +1,8 @@
+PROJECT_NAME = "The magic square project"
+OUTPUT_DIRECTORY = ./doc
+INPUT = magic_board.c matrix.c matrix.h
+FILE_PATTERNS = *.h *.c
+EXCLUDE =
+GENERATE_HTML = YES
+GENERATE_LATEX = NO
+GENERATE_RTF = NO
