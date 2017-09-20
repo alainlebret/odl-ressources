@@ -24,5 +24,5 @@ gcc -shared -o libbib.so bib.o
 echo "Linking with the shared library"
 gcc -L. -o test_shared main.o -lbib
 
-echo "Making the shared library available:"
+echo "Making the shared library available..."
 export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
