@@ -19,7 +19,12 @@
 /**
  * @file warning.c
  *
- * Examples to highlight abnormalities.
+ * Example to highlight this kind of warning:
+ * $ gcc -Wall -Wextra -ansi -pedantic warning.c
+ * warning.c:31:12: warning: implicit declaration of function 'f' [-Wimplicit-function-declaration]
+ *       short v = f();
+ *                 ^
+ * 1 warning generated.
  */
 
 #include <stdio.h>
@@ -34,7 +39,7 @@ int main() {
 }
 
 /** 
- * Returns the long value LONG_MAX-1.
+ * Returns the int value INT_MAX-1.
  */
 int f() {
 	int result = INT_MAX;
