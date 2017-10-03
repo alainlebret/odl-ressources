@@ -21,7 +21,7 @@
  *
  * Example to highlight this kind of warning:
  * $ gcc -Wall -Wextra -ansi -pedantic warning.c
- * warning.c:31:12: warning: implicit declaration of function 'f' [-Wimplicit-function-declaration]
+ * warning.c:34:12: warning: implicit declaration of function 'f' [-Wimplicit-function-declaration]
  *       short v = f();
  *                 ^
  * 1 warning generated.
@@ -31,9 +31,7 @@
 #include <limits.h>
 
 int main() {
-	short v = f();
-	
-	printf("In the main function, f returns the value : %d\n", v);
+	printf("In the main function, f returns the value : %d\n", f());
 	
 	return 0;
 }
