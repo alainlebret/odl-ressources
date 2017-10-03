@@ -37,7 +37,7 @@ int main() {
 }
 
 /** 
- * Returns the int value INT_MAX-1.
+ * Returns the int value INT_MAX-10.
  */
 int f() {
 	int result = INT_MAX;
