@@ -30,20 +30,43 @@
 #include <stdio.h>
 #include <limits.h>
 
+long f1() {
+	long result = LONG_MAX;
+
+	result -= 10;
+	printf("In f1, result has the value : %ld\n", result);
+	
+	return result;
+}
+
+int f2(int param) {
+	int result;
+	
+	printf("In f2, param has the value : %d\n", param);
+	
+	result = param - 10;
+	
+	return param;
+}
+
+void test_f1() {
+	int value1 = f1();
+	long best_value1 = f1();
+	
+	printf("When testing, f1 returns the value : %d\n", value1);
+	printf("When testing, f1 returns the value : %ld\n", best_value1);	
+}
+
+void test_f2() {
+	long best_value2 = f1();
+	
+	printf("When testing, f2 returns the value : %ld\n", (long)f2(best_value2));
+}
+
 int main() {
-	printf("In the main function, f returns the value : %d\n", f());
+	test_f1();
+	test_f2();
 	
 	return 0;
 }
 
-/** 
- * Returns the int value INT_MAX-10.
- */
-int f() {
-	int result = INT_MAX;
-
-	result -= 10;
-	printf("In f, result has the value : %d\n", result);
-	
-	return result;
-}
