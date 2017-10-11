@@ -19,12 +19,27 @@
 /**
  * @file warning.c
  *
- * Example to highlight this kind of warning:
- * $ gcc -Wall -Wextra -ansi -pedantic warning.c
- * warning.c:34:12: warning: implicit declaration of function 'f' [-Wimplicit-function-declaration]
- *       short v = f();
- *                 ^
- * 1 warning generated.
+ * An example to highlight some warnings using splint (http://www.splint.org) :
+ * $ splint warning.c
+ * Splint 3.1.2 --- 15 Apr 2016
+ * warning.c: (in function test_f1)
+ * warning.c:53:15: Variable value1 initialized to type long int, expects int:
+ *                   f1()
+ *  To ignore type qualifiers in type comparisons use +ignorequals.
+ * warning.c: (in function test_f2)
+ * warning.c:63:64: Function f2 expects arg 1 to be int gets long int: best_value2
+ * warning.c:33:6: Function exported but not used outside warning: f1
+ * A declaration is exported, but not used outside this module. Declaration can
+ * use static qualifier. (Use -exportlocal to inhibit warning)
+ * warning.c:40:1: Definition of f1
+ * warning.c:42:5: Function exported but not used outside warning: f2
+ * warning.c:50:1: Definition of f2
+ * warning.c:52:6: Function exported but not used outside warning: test_f1
+ * warning.c:58:1: Definition of test_f1
+ * warning.c:60:6: Function exported but not used outside warning: test_f2
+ * warning.c:64:1: Definition of test_f2
+ * 
+ * Finished checking --- 6 code warnings
  */
 
 #include <stdio.h>
