@@ -59,7 +59,7 @@ char getche(void)
 	return getch_(1);
 }
 
-/* Let's test it out */
+/* Let's try */
 int main(void) {
 	char c;
 
@@ -67,7 +67,7 @@ int main(void) {
 	c = getche();
 	printf("\nYou typed: %c\n", c);
 
-	printf("(getch example) please type a letter...");
+	printf("(getch example) please type a letter: ");
 	c = getch();
 	printf("\nYou typed: %c\n", c);
 
