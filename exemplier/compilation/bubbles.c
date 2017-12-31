@@ -8,13 +8,13 @@
  *
  * Chapter "Compilation" / Chapitre "Compilation"
  *
- * Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
+ * Copyright (C) 1995-2018 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @author    Alain Lebret <alain.lebret@ensicaen.fr>
  * @version   1.0
- * @date      1995-2017
+ * @date      1995-2018
  */
 
 /**
@@ -24,11 +24,11 @@
  *
  * Compile using the following commands:
  * \code{.bash}
- * gcc -O0 bubbles.c -o bubbles_O0
- * gcc -O1 bubbles.c -o bubbles_O1
- * gcc -O2 bubbles.c -o bubbles_O2
- * gcc -O3 bubbles.c -o bubbles_O3
- * gcc -Os bubbles.c -o bubbles_Os
+ * gcc -Wall -Wextra -pedantic -std=c99 -O0 bubbles.c -o bubbles_O0
+ * gcc -Wall -Wextra -pedantic -std=c99 -O1 bubbles.c -o bubbles_O1
+ * gcc -Wall -Wextra -pedantic -std=c99 -O2 bubbles.c -o bubbles_O2
+ * gcc -Wall -Wextra -pedantic -std=c99 -O3 bubbles.c -o bubbles_O3
+ * gcc -Wall -Wextra -pedantic -std=c99 -Os bubbles.c -o bubbles_Os
  * \endcode
  *
  * Execution:
@@ -41,37 +41,39 @@
  * \endcode
  *
  */
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h> 
+#include <time.h>
+#include <inttypes.h>
+#include <stdbool.h>
 
-#define SIZE 12345
+#define SIZE 123456
 #define TRUE 1
 #define FALSE 0
 
-void sort_using_bubbles(int *array, int nbr_elements) {
-	int i;		/* index to browse the array */
-	int ended_sort;	/* a flag to indicate the end of sort */
-	int temp;	/* temporary value */
+void sort_using_bubbles(uint32_t *array, uint32_t nbr_elements) {
+	bool ended_sort;	/* a flag to indicate the end of sort */
+	uint32_t temp;	    /* temporary value */
 
-	ended_sort = TRUE;
+	ended_sort = true;
 
 	while (!ended_sort) {
-		ended_sort = FALSE;
-		for (i = 1; i < nbr_elements; i++) {
+		ended_sort = false;
+		for (uint32_t  i = 1; i < nbr_elements; i++) {
 			if (array[i] < array[i - 1]) {
 				temp = array[i];
 				array[i] = array[i - 1];
 				array[i - 1] = temp;
-				ended_sort = TRUE;
+				ended_sort = true;
 			}
 		}
 	}
 }
 
 int main(void) {
-	int array[SIZE];
-	int index;
+	uint32_t array[SIZE];
+	uint32_t index;
 
 	srand(time(NULL));
 
@@ -80,13 +82,13 @@ int main(void) {
 	}
 
 	for (index = 0; index < SIZE; index++) {
-		printf("%d%s", array[index], index == SIZE - 1 ? "\n" : " ");
+		printf("%" PRId32 "%s", array[index], index == SIZE - 1 ? "\n" : " ");
 	}
 
 	sort_using_bubbles(array, SIZE);
 
 	for (index = 0; index < SIZE; index++) {
-		printf("%d%s", array[index], index == SIZE - 1 ? "\n" : " ");
+		printf("%" PRId32 "%s", array[index], index == SIZE - 1 ? "\n" : " ");
 	}
 
 	exit(EXIT_SUCCESS);
