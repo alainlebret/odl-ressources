@@ -41,12 +41,12 @@
  * \endcode
  *
  */
-#include <stdint.h>
+#include <stdint.h>   /* C99 */
+#include <inttypes.h> /* C99 */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <inttypes.h>
-#include <stdbool.h>
+#include <stdbool.h>  /* C99 */
 
 #define SIZE 123456
 #define TRUE 1
