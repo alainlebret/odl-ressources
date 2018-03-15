@@ -1,3 +1,5 @@
+<img src="figures/screenshot.png" alt="A scattered code" width="350">
+
 ![A scattered code](figures/screenshot.jpg?raw=true)
 
 ## Outils de développement logiciel
