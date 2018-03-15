@@ -1,4 +1,4 @@
--> <img src="figures/screenshot.png" alt="A scattered code" title="A scattered code" width="450"> <-
+<p align="center"><img src="figures/screenshot.png" alt="A scattered code" title="A scattered code" width="450"></p>
 
 ## Outils de développement logiciel
 
