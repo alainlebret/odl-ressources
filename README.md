@@ -1,4 +1,4 @@
-![A scattered code](figures/screenshot.jpg?raw=true | width=100)
+![A scattered code](./figures/screenshot.jpg?raw=true)
 
 ## Outils de développement logiciel
 
