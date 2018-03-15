@@ -1,6 +1,4 @@
-<img src="figures/screenshot.png" alt="A scattered code" width="350">
-
-![A scattered code](figures/screenshot.jpg?raw=true)
+<img src="figures/screenshot.png" alt="A scattered code" title="A scattered code" width="450">
 
 ## Outils de développement logiciel
 
