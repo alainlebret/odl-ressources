@@ -25,13 +25,13 @@ theme-override : template/css/PITCHME.css
 # https://gitpitch.com/docs/settings/logo
 #
 logo : template/img/logo.png
-logo-position : top-left
+logo-position : top-right
 
 #
 # Footnote Setting
 # Doc: https://gitpitch.com/docs/settings/footnote
 #
-footnote : "GitPitch - The Fastest Way From Idea To Presentation"
+footnote : "ENSICAEN - Outils de développement logiciel"
 
 #
 # Highlight (Code) Setting
@@ -43,7 +43,7 @@ highlight : atom-one-dark
 # Layout Setting
 # Doc: https://gitpitch.com/docs/settings/layout
 #
-layout : center
+layout : left
 
 #
 # Transition Setting
