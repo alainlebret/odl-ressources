@@ -37,13 +37,13 @@ footnote : "ENSICAEN - Outils de développement logiciel"
 # Highlight (Code) Setting
 # Doc: https://gitpitch.com/docs/settings/highlight
 #
-highlight : atom-one-dark
+highlight : idea
 
 #
 # Layout Setting
 # Doc: https://gitpitch.com/docs/settings/layout
 #
-layout : left
+layout : top-left
 
 #
 # Transition Setting
