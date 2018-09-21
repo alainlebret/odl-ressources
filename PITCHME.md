@@ -1,4 +1,4 @@
-![Logo ENSICAEN](figures/logo/ensicaen.svg)
+![Logo ENSICAEN](figures/logo/ensicaen.png)
 ## Outils de développement logiciel
 _Alain Lebret (alain.lebret@ensicaen.fr)_
 
@@ -6,6 +6,7 @@ _Alain Lebret (alain.lebret@ensicaen.fr)_
 ---
 ### A propos du cours
 #### Objectif
+
 - Maîtriser un environnement et ses outils de développement logiciel
 
 #### Modalités
@@ -13,9 +14,7 @@ _Alain Lebret (alain.lebret@ensicaen.fr)_
 - TP    : 22 h / APP 20 h
 
 #### Examens
-2 notes : 
-- TP (coef. 1)
-- examen final (coef. 1)
+2 notes : TP (coef. 1) + examen final (coef. 1)
 
 <!-- ********************************************************************** -->
 ---
