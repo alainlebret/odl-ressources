@@ -12,13 +12,13 @@ published : true
 # Theme Setting
 # Doc: https://gitpitch.com/docs/settings/theme
 #
-theme : simple
+theme : night
 
 #
 # Theme-Override Setting
 # Doc: https://gitpitch.com/docs/settings/custom-theme
 #
-theme-override : template/css/PITCHME.css
+# theme-override : template/css/PITCHME.css
 
 #
 # Logo Setting
