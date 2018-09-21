@@ -1,6 +1,6 @@
 ![Logo ENSICAEN](figures/logo/ensicaen.svg)
 ## Outils de développement logiciel
-_[Alain Lebret (alain.lebret@ensicaen.fr)]_
+_Alain Lebret (alain.lebret@ensicaen.fr)_
 
 <!-- ********************************************************************** -->
 ---
