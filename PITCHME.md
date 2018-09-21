@@ -5,13 +5,15 @@ _Alain Lebret (alain.lebret@ensicaen.fr)_
 <!-- ********************************************************************** -->
 ---
 ### A propos du cours
-#### Objectif
 
+#### Objectif
 - Maîtriser un environnement et ses outils de développement logiciel
+
 
 #### Modalités
 - Cours : 16 h / APP 12 h
 - TP    : 22 h / APP 20 h
+
 
 #### Examens
 2 notes : TP (coef. 1) + examen final (coef. 1)
