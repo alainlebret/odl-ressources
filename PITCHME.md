@@ -2,7 +2,7 @@ class: center, middle
 
 ![Logo ENSICAEN](figures/logo/ensicaen.svg)
 # Outils de développement logiciel
-_ .lightgray.italic[Alain Lebret (alain.lebret@ensicaen.fr)] _
+_[Alain Lebret (alain.lebret@ensicaen.fr)]_
 
 <!-- ********************************************************************** -->
 ---
