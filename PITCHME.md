@@ -1,27 +1,25 @@
-class: center, middle
-
 ![Logo ENSICAEN](figures/logo/ensicaen.svg)
-# Outils de développement logiciel
+## Outils de développement logiciel
 _[Alain Lebret (alain.lebret@ensicaen.fr)]_
 
 <!-- ********************************************************************** -->
 ---
-# A propos du cours
-### Objectif
+### A propos du cours
+#### Objectif
 - Maîtriser un environnement et ses outils de développement logiciel
 
-### Modalités
+#### Modalités
 - Cours : 16 h / APP 12 h
 - TP    : 22 h / APP 20 h
 
-### Examens
+#### Examens
 2 notes : 
 - TP (coef. 1)
 - examen final (coef. 1)
 
 <!-- ********************************************************************** -->
 ---
-# Références
+### Références
 
 ![The Linux command line](figures/a_propos/linux-shell.png)
 ![Linux](figures/a_propos/linux.png)
@@ -32,13 +30,13 @@ _[Alain Lebret (alain.lebret@ensicaen.fr)]_
 
 <!-- ********************************************************************** -->
 ---
-# ODL dans la formation
+### ODL dans la formation
 
 ![formation](figures/introduction/formation.png)
 
 <!-- ********************************************************************** -->
 ---
-# Contenu du cours
+### Contenu du cours
 1. Introduction
 2. Organisation des disques et commandes Unix/Linux
 3. Édition
@@ -48,49 +46,49 @@ _[Alain Lebret (alain.lebret@ensicaen.fr)]_
 
 <!-- ********************************************************************** -->
 ---
-# Avant l'ordinateur
+### Avant l'ordinateur
 ![The Linux command line](figures/introduction/machine.png)
 
 <!-- ********************************************************************** -->
 ---
-# Ordinateur
+### Ordinateur
 ![The Linux command line](figures/introduction/ordinateur.png)
 
 <!-- ********************************************************************** -->
 ---
-# Architecture matérielle (_hardware_)
+### Architecture matérielle (_hardware_)
 ![The Linux command line](figures/introduction/architecture.png)
 
 <!-- ********************************************************************** -->
 ---
-# Architecture logicielle (_software_)
+### Architecture logicielle (_software_)
 ![The Linux command line](figures/introduction/OS.png)
 
 <!-- ********************************************************************** -->
 ---
-# Architecture logicielle (_software_)
+### Architecture logicielle (_software_)
 ![The Linux command line](figures/introduction/vueEnsembleUNIX.png)
  
 <!-- ********************************************************************** -->
 ---
-# Principaux environnements
+### Principaux environnements
 ![The Linux command line](figures/introduction/environnements.png)
 
 <!-- ********************************************************************** -->
 ---
-# Systèmes d'exploitation des développeurs
+### Systèmes d'exploitation des développeurs
 ![The Linux command line](figures/introduction/os_devel_2016.png)
 Source : stackoverflow.com, 2016
 
 <!-- ********************************************************************** -->
 ---
-# Systèmes à l'ENSICAEN
+### Systèmes à l'ENSICAEN
 Machines sous Ms-Windows + Ubuntu
-## Sites de référence
+#### Sites de référence
 - Institutionnel : [https://www.ensicaen.fr](https://www.ensicaen.fr)
 - Cours et TP : [http://foad.ensicaen.fr](http://foad.ensicaen.fr)
 
-## Accès de l'utilisateur Jean Saigne
+#### Accès de l'utilisateur Jean Saigne
 - Dossier perso : `/home/eleves/promo21/info/jsaigne`
 - Espace Web : [http://www.ecole.ensicaen.fr/~jsaigne](http://www.ecole.ensicaen.fr/~jsaigne)
 - Espace courrier : 
@@ -101,31 +99,31 @@ Machines sous Ms-Windows + Ubuntu
 
 <!-- ********************************************************************** -->
 ---
-# Bureau Ubuntu
+### Bureau Ubuntu
 ![The Linux command line](figures/introduction/bureau_ubuntu.png)
 
 <!-- ********************************************************************** -->
 ---
-# Accès distant Cybèle
+### Accès distant Cybèle
 ![The Linux command line](figures/introduction/cybele.png)
 
 <!-- ********************************************************************** -->
 ---
-# Emacs sur Cybèle
+### Emacs sur Cybèle
 ![The Linux command line](figures/introduction/emacs_cybele.png)
 
 <!-- ********************************************************************** -->
 ---
-# Emacs sur Cybèle
+### Emacs sur Cybèle
 [Chaîne de compilation](./sections/compilation.html)
 
 <!-- ********************************************************************** -->
 ---
-##  Étapes de compilation : *traduction*
-### Rôle
+###  Étapes de compilation : *traduction*
+#### Rôle
 Vérification de la syntaxe puis génération du code intermédiaire
 
-### Outil sous-jacent 
+#### Outil sous-jacent 
 
 - ``` cc1 ``` : **compilateur**
 
@@ -133,7 +131,7 @@ Vérification de la syntaxe puis génération du code intermédiaire
 cc1 [options] fichier.i
 ```
 
-### Options de *gcc*
+#### Options de *gcc*
 
 - `-c` : compile uniquement sans étape d'édition des liens
 - `-Wall` : avertissements
@@ -148,7 +146,7 @@ gcc fichier.c -c
 
 <!-- ********************************************************************** -->
 ---
-## À propos des syntaxes (K&R, ANSI, C99)
+### À propos des syntaxes (K&R, ANSI, C99)
 ```c
 int foo(a, p)
 int a,
@@ -168,4 +166,4 @@ int foo(int a, char *p) {
 
 <!-- ********************************************************************** -->
 ---
-## À propos des syntaxes (K&R, ANSI, C99)
+### À propos des syntaxes (K&R, ANSI, C99)
