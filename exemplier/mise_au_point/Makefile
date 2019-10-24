@@ -12,37 +12,37 @@
 #
 
 CC = gcc
-CPPFLAGS = -Wall -Wextra -ansi -pedantic
-CFLAGS = -c -g -pg
-LDFLAGS = -o
+CPPFLAGS = -I. 
+CFLAGS = -Wall -Wextra -ansi -pedantic -c -g -pg
+LDFLAGS = 
 DEPS = f.h
 EXEC = test_traces test_gdb test_memory test_assert test_gprof test_clock test_rand
 
 all : $(EXEC)
 
 %.o : %.c $(DEPS)
-	$(CC) $(CFLAGS) -o $@ $< $(CPPFLAGS)
+	$(CC) $(CPPFLAGS) $(CFLAGS) -o $@ $< 
 	
 test_traces : test_traces.o f.o
-	 $(CC) $^ $(LDFLAGS) $@
+	 $(CC) $^ -o $@ $(LDFLAGS) 
 	 
 test_gdb : test_gdb.o f.o
-	 $(CC) $^ $(LDFLAGS) $@
+	 $(CC) $^ -o $@ $(LDFLAGS) 
 	 
 test_memory : test_memory.o f.o
-	 $(CC) $^ $(LDFLAGS) $@
+	 $(CC) $^ -o $@ $(LDFLAGS) 
 	 
 test_assert : test_assert.o f.o
-	 $(CC) $^ $(LDFLAGS) $@
+	 $(CC) $^ -o $@ $(LDFLAGS)
 	 
 test_gprof : test_gprof.o f.o
-	 $(CC) $^ $(LDFLAGS) $@
+	 $(CC) $^ -o $@ $(LDFLAGS) 
 
 test_clock : test_clock.o f.o
-	 $(CC) $^ $(LDFLAGS) $@
+	 $(CC) $^ -o $@ $(LDFLAGS) 
 
 test_rand : test_rand.o f.o
-	 $(CC) $^ $(LDFLAGS) $@
+	 $(CC) $^ -o $@ $(LDFLAGS) 
 
 clean :
 	rm -Rf *.o gmon.out gmon.txt $(EXEC) *.dSYM
