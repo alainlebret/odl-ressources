@@ -24,8 +24,9 @@
  * \c -pedantic.
  */
 
-int main(void) {
+int main(int argc, char *argv[]) {
 	int voting_age;
+	int ages[argc];
 
 	voting_age = 18; // Not valid in Japan
 
