@@ -31,11 +31,11 @@
 #   find ./ -type f | wc -l
 #
 LIST=""
-echo ${LIST}
+echo "${LIST}"
 
 for file in *
 	do
-		nom=${file%%.*}
+		name=${file%%.*}
 		extension=${file##*.}
 		echo "$extension"
 		LIST="$LIST $file"
@@ -43,5 +43,5 @@ for file in *
 
 echo "$LIST"
 echo " "
-nb="$( echo $LIST | wc -w ) files"
-echo ${nb}
+nb="$( echo "$LIST" | wc -w ) files"
+echo "$nb"
