@@ -31,7 +31,7 @@ then
   then
     mkdir trash
   fi
-  mv -t $1 trash
+  mv $1 trash
 else
   echo "Usage: $0 filename"
   exit 1
