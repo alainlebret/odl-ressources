@@ -27,9 +27,9 @@
 MESSAGE="Bonjour"
 message="bonjour"
 
-echo "MESSAGE: " + MESSAGE
-echo "message: " + message
-echo "$MESSAGE: " + ${MESSAGE}
-echo "$message: " + ${message}
-echo "\$MESSAGE: " + ${MESSAGE}
-echo "\$message: " + ${message}
+echo "MESSAGE: " MESSAGE
+echo "message: " message
+echo "$MESSAGE: " ${MESSAGE}
+echo "$message: " ${message}
+echo "\$MESSAGE: " ${MESSAGE}
+echo "\$message: " ${message}
