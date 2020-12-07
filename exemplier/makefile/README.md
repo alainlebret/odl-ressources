@@ -144,3 +144,7 @@ executable will be produced in the `bin` subdirectory.
 --------------------------------------------------------------------------------
 In this ninth version, we use the predefined macros `$@` and `$^` which
 respectively correspond to the target name and the list of dependency files.
+
+## multimakefiles
+--------------------------------------------------------------------------------
+Here, we present the include directive
