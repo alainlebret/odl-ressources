@@ -18,7 +18,7 @@
 
 ## v1
 --------------------------------------------------------------------------------
-In this version, the program is concentrate in a single file called
+In this version, the program is concentrated in a single file called
 `magic_square.c` that you can compile as follows:
 
     $ gcc -Wall -Wextra -ansi -pedantic magic_square.c -o magic_square
