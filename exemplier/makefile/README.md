@@ -12,8 +12,10 @@
 
 [//]: # (        Chapter "The make command" / Chapitre "Commande make"         )
  
-[//]: # (    Copyright (C) 1995-2020 Alain Lebret alain.lebret at ensicaen.fr  ) 
-							   
+[//]: # (     Copyright 1995-2020 Alain Lebret alain.lebret at ensicaen.fr     ) 
+	
+[//]: # (----------------------------------------------------------------------)
+
 ## v1
 --------------------------------------------------------------------------------
 In this version, the program is concentrate in a single file called
@@ -150,4 +152,4 @@ respectively correspond to the target name and the list of dependency files.
 
 ## multi-makefiles
 --------------------------------------------------------------------------------
-Here, we use the include directive
+Here, we use the `include` directive.
