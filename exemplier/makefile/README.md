@@ -1,15 +1,18 @@
---------------------------------------------------------------------------------
-                                   ENSICAEN
-                           6 Boulevard Maréchal Juin
-                              F-14050 Caen Cedex
+[//]: # (----------------------------------------------------------------------)
 
-              Examples from the course "Software development tools"
-           Exemplier du cours "Outils de développement logiciel" (ODL)
+[//]: # (                           ENSICAEN                                   )
 
-              Chapter "The make command" / Chapitre "Commande make"
+[//]: # (                  6 Boulevard Maréchal Juin                           )
+
+[//]: # (                     F-14050 Caen Cedex                               )
+
+[//]: # (       Examples from the course "Software development tools"          )
+
+[//]: # (     Exemplier du cours "Outils de développement logiciel" (ODL)      )   
+
+[//]: # (        Chapter "The make command" / Chapitre "Commande make"         )
  
-        Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
---------------------------------------------------------------------------------
+[//]: # (    Copyright (C) 1995-2020 Alain Lebret (alain.lebret@ensicaen.fr)   ) 
 							   
 ## v1
 --------------------------------------------------------------------------------
@@ -113,7 +116,7 @@ Then, to run the Java program, just enter:
     $ java -jar v7.jar TestingFrame
 
 ## v8
-------
+--------------------------------------------------------------------------------
 In this eighth version, we consider a more complex project with several
 subdirectories as below:
 
@@ -145,6 +148,6 @@ executable will be produced in the `bin` subdirectory.
 In this ninth version, we use the predefined macros `$@` and `$^` which
 respectively correspond to the target name and the list of dependency files.
 
-## multimakefiles
+## multi-makefiles
 --------------------------------------------------------------------------------
-Here, we present the include directive
+Here, we use the include directive
