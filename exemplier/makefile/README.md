@@ -8,11 +8,11 @@
 
 [//]: # (       Examples from the course "Software development tools"          )
 
-[//]: # (     Exemplier du cours "Outils de développement logiciel" (ODL)      )   
+[//]: # (      Exemplier du cours "Outils de développement logiciel" ODL       )   
 
 [//]: # (        Chapter "The make command" / Chapitre "Commande make"         )
  
-[//]: # (    Copyright (C) 1995-2020 Alain Lebret (alain.lebret@ensicaen.fr)   ) 
+[//]: # (    Copyright (C) 1995-2020 Alain Lebret alain.lebret at ensicaen.fr  ) 
 							   
 ## v1
 --------------------------------------------------------------------------------
