@@ -1,3 +1,3 @@
 # Dotfiles
 
-Some config files for Vim, etc.
+Some config files (.vimrc, .bashrc, etc.) that we use with students...
