@@ -1,0 +1,82 @@
+;; ---------------------------------------------------------------------------
+;;                            Fichier .emacs perso
+;; ---------------------------------------------------------------------------
+
+;; ---------------------------------------------------------------------------
+;; Environnement
+;; ---------------------------------------------------------------------------
+(set-language-environment "UTF-8")     
+
+;; ---------------------------------------------------------------------------
+;; Dictionnaire français par défaut
+;; ---------------------------------------------------------------------------
+(setq ispell-dictionnary "francais")     
+
+;; ---------------------------------------------------------------------------
+;; Affichage des numéros de ligne et colonne
+;; ---------------------------------------------------------------------------
+(column-number-mode t)
+(line-number-mode t)
+(global-linum-mode 1)       
+
+;; ---------------------------------------------------------------------------
+;; Installation de paquetages
+;; ---------------------------------------------------------------------------
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://stable.melpa.org/packages/"))
+(package-initialize)       
+       
+;; ---------------------------------------------------------------------------
+;; Gestion du langage markdown
+;; ---------------------------------------------------------------------------
+;; Le fichier "markdown-mode" doit être placé dans "~/.emacs.d/packages/"
+;; ---------------------------------------------------------------------------
+(add-to-list 'load-path "~/.emacs.d/packages/")
+(autoload 'markdown-mode "markdown-mode"
+"Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+;; ---------------------------------------------------------------------------
+;; Thème suivant la version textuelle ou graphique                               
+;; ---------------------------------------------------------------------------
+(if window-system
+    (load-theme 'solarized-light t)
+  (load-theme 'wombat t))
+
+;; ---------------------------------------------------------------------------
+;; Gestion des couleurs
+;; ---------------------------------------------------------------------------
+(require 'ansi-color)
+(defun colorize-compilation-buffer ()
+  (toggle-read-only)
+  (ansi-color-apply-on-region (point-min) (point-max))
+  (toggle-read-only))
+(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)       
+
+;; ---------------------------------------------------------------------------
+;; Configuration pour le langage C
+;; ---------------------------------------------------------------------------
+(setq c-default-style "gnu")
+(setq c-basic-offset 4)
+(require 'paren)       
+(show-paren-mode)
+       
+(autoload 'odf-mode "odf-mode" "ODF mode" t)
+
+;; ---------------------------------------------------------------------------
+;; Configuration pour valgrind
+;; ---------------------------------------------------------------------------
+(defun valgrind ()
+(interactive)
+(compilation-minor-mode)
+(define-key compilation-minor-mode-map (kbd "")'comint-send-input)
+(define-key compilation-minor-mode-map (kbd "S-")'compile-goto-error))
+
+(add-hook 'shell-mode-hook 'valgrind)
+
+;; ---------------------------------------------------------------------------
+;; C'est suffisant pour moi, mais rien ne vous empêche de l'étoffer
+;; ---------------------------------------------------------------------------

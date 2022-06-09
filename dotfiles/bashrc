@@ -1,0 +1,2 @@
+alias da='date "+%d-%m-%Y (%T)"'
+source ~/.bash-powerline.sh

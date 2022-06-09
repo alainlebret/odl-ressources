@@ -1,0 +1,31 @@
+unalias -a
+
+# Safety first
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+
+# Colorize output, make ls human readable and classify...
+if [[ `uname` == Darwin ]]; then
+  alias dircolors='gdircolors'
+  alias ls='gls --color=auto -hF'
+else
+  alias ls='ls --color=auto -hF'
+
+  # ...and standardize to macOS naming on Linux
+  alias open='xdg-open'
+fi
+
+# Colorize cat with bat
+alias cat='bat'
+
+# Disk utility aliases
+alias df='df -h'
+alias du='du -h'
+
+# Colorize output and some exclusions
+alias grep="grep --color=auto --exclude-dir={.git,artwork,node_modules,vendor}"
+
+# Connect to Cybele server at the ENSICAEN
+alias cybele='ssh alebret@cybele.ecole.ensicaen.fr'
+
