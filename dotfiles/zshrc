@@ -1,4 +1,3 @@
-
 SAVEHIST=2000
 HISTSIZE=2000
 HISTFILE=~/.zsh_history
