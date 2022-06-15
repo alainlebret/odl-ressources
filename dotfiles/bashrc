@@ -7,7 +7,8 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # Colorize output, make ls human readable and classify...
-if [[ `uname` == Darwin ]]; then
+if [[ `uname` == Darwin ]]
+then
   alias dircolors='gdircolors'
   alias ls='gls --color=auto -hF'
 else
@@ -17,17 +18,9 @@ else
   alias open='xdg-open'
 fi
 
-# Colorize cat with bat
-alias cat='bat'
-
 # Disk utility aliases
 alias df='df -h'
 alias du='du -h'
 
 # Colorize output and some exclusions
 alias grep="grep --color=auto --exclude-dir={.git,artwork,node_modules,vendor}"
-
-# Connect to Cybele server at the ENSICAEN
-alias cybele="ssh $(whoami)@cybele.ecole.ensicaen.fr"
-
-source ~/.bash-powerline.sh
