@@ -62,7 +62,7 @@ function help() {
 function initialize_rep() {
    if [ ! -e $PROJECT_PATH ]; then
       mkdir $PROJECT_PATH
-      for repertory in bin/test doc etc include lib object src/test
+      for repertory in bin/test doc etc include lib src/test
          do
             mkdir -p "$PROJECT_PATH/$repertory"
          done
