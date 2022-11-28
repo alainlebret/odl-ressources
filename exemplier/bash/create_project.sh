@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -37,6 +37,9 @@ ENTETE_C="/*
  * or revised without written permission of the authors.
  */"
  
+# All errors are logged 
+exec 2>>/tmp/create_project.log
+ 
 #
 # 
 #
@@ -59,9 +62,9 @@ function help() {
 function initialize_rep() {
    if [ ! -e $PROJECT_PATH ]; then
       mkdir $PROJECT_PATH
-      for repertory in bin doc etc include lib object src
+      for repertory in bin/test doc etc include lib object src/test
          do
-            mkdir "$PROJECT_PATH/$repertory"
+            mkdir -p "$PROJECT_PATH/$repertory"
          done
       return 0
    else
@@ -74,8 +77,8 @@ function initialize_rep() {
 # 
 #
 function create_README() {
-   cat > "$PROJECT_PATH/README.txt"<<EOF
-This program 
+   cat > "$PROJECT_PATH/README.md"<<EOF
+# Projet "$PROJECT_PATH"
 bla bla bla
 bli bli bli
 EOF
@@ -86,7 +89,8 @@ EOF
 #
 function create_INSTALL() {
    cat > "$PROJECT_PATH/INSTALL.txt"<<EOF
-# This program 
+How to install this program
+ 
 bla bla bla
 bli bli bli
 EOF
@@ -107,26 +111,26 @@ EOF
 function create_Makefile() {
    echo "CC       = gcc
 RM       = rm
-CPPFLAGS = -Wall -Wextra -I./include
-CCFLAGS  = -pedantic -O2
+CPPFLAGS = -I./include
+CFLAGS   = -Wall -Wextra -ansi -pedantic -g
 LDFLAGS  = -L ./lib
 
 .PHONY: all clean distclean
 
-all: ./bin/main.exe
+all: ./bin/prog.exe
 
-./bin/main.exe: ./object/main.o
-\t\$(CC) \$< -o \$@ \$(LDFLAGS)
+./bin/prog.exe: ./src/main.o # And others .o
+	\$(CC) \$< -o \$@ \$(LDFLAGS)
 
-./object/%.o: ./src/%.c
-\t\$(CC) \$(CCFLAGS) \$(CPPFLAGS) \$< -o \$@ -c
+./src/%.o: ./src/%.c
+	\$(CC) \$(CPPFLAGS) \$(CFLAGS) \$< -o \$@ -c
 
 clean:
-\t-@\$(RM) ./src/*~ ./include/*~
-\t-@\$(RM) ./object/*.o
+	-@\$(RM) ./src/*~ ./include/*~
+	-@\$(RM) ./src/*.o
 
 distclean: clean
-\t-@\$(RM) ./bin/main.exe" > $PROJECT_PATH/Makefile
+	-@\$(RM) ./bin/main.exe" > $PROJECT_PATH/Makefile
 }
 
 #
@@ -283,3 +287,4 @@ fi
 
 menu
 
+exit 0
