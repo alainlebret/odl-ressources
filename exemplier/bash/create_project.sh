@@ -133,7 +133,7 @@ clean:
 	-@\$(RM) ./src/*.o
 
 distclean: clean
-	-@\$(RM) ./bin/main.exe" > $PROJECT_PATH/Makefile
+	-@\$(RM) ./bin/prog.exe" > $PROJECT_PATH/Makefile
 }
 
 #
