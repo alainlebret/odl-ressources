@@ -130,7 +130,6 @@ doc:
 	-@\$(DOC) doc/Doxyfile
 
 clean:
-	-@\$(RM) ./src/*~ ./include/*~
 	-@\$(RM) ./src/*.o
 
 distclean: clean
