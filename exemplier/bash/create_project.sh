@@ -177,7 +177,7 @@ EOF
 
 function copy_minunit() {
 	wget -P "$PROJECT_PATH/include" https://raw.githubusercontent.com/siu/minunit/master/minunit.h
-	wget -P "$PROJECT_PATH/src/test/minunit_example.c" https://raw.githubusercontent.com/siu/minunit/master/minunit_example.c
+	wget -P "$PROJECT_PATH/src/test" https://raw.githubusercontent.com/siu/minunit/master/minunit_example.c
 }
 
 #
