@@ -111,11 +111,12 @@ EOF
 function create_Makefile() {
    echo "CC       = gcc
 RM       = rm
+DOC      = doxygen
 CPPFLAGS = -I./include
 CFLAGS   = -Wall -Wextra -ansi -pedantic -g
-LDFLAGS  = -L ./lib
+LDFLAGS  = -L ./lib # Add the libraries you will use, e.g. -lm
 
-.PHONY: all clean distclean
+.PHONY: all doc clean distclean
 
 all: ./bin/prog.exe
 
@@ -124,6 +125,9 @@ all: ./bin/prog.exe
 
 ./src/%.o: ./src/%.c
 	\$(CC) \$(CPPFLAGS) \$(CFLAGS) \$< -o \$@ -c
+
+doc:
+	-@\$(DOC) doc/Doxyfile
 
 clean:
 	-@\$(RM) ./src/*~ ./include/*~
@@ -161,6 +165,25 @@ EOF
 #
 # 
 #
+function create_Doxyfile() {
+   cat > "$PROJECT_PATH/doc/Doxyfile"<<EOF
+PROJECT_NAME = "$PROJECT_PATH"
+OUTPUT_DIRECTORY = doc
+FILE_PATTERNS = include/*.h src/*.c
+GENERATE_HTML = YES
+GENERATE_LATEX = NO
+GENERATE_RTF = NO
+EOF
+}
+
+function copy_minunit() {
+	wget -P "$PROJECT_PATH/include" https://raw.githubusercontent.com/siu/minunit/master/minunit.h
+	wget -P "$PROJECT_PATH/src/test/minunit_example.c" https://raw.githubusercontent.com/siu/minunit/master/minunit_example.c
+}
+
+#
+# 
+#
 function create_project() {
    echo "Entrer le nom du nouveau projet :"
    read PROJECT_PATH
@@ -172,6 +195,8 @@ function create_project() {
       create_AUTHORS
       create_main
       create_Makefile
+	  create_Doxyfile
+	  copy_minunit
       echo "Projet `basename $PROJECT_PATH` créé."
    fi
 }
@@ -193,6 +218,8 @@ function open_project() {
          create_AUTHORS
          create_main
          create_Makefile
+   	     create_Doxyfile
+   	     copy_minunit
       fi
       echo "Projet `basename $PROJECT_PATH` créé."
       return 0
