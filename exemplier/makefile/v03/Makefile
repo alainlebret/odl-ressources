@@ -12,10 +12,10 @@
 #
 
 magic_board.o : magic_board.c matrix.h
-	gcc -Wall -Wextra -ansi -pedantic -c -I. magic_board.c
+	gcc -I. -Wall -Wextra -ansi -pedantic magic_board.c -c 
 
 matrix.o : matrix.c matrix.h
-	gcc -Wall -Wextra -ansi -pedantic -c -I. matrix.c
+	gcc -I. -Wall -Wextra -ansi -pedantic matrix.c -c 
 
 magic_board : magic_board.o matrix.o
 	gcc *.o -o magic_board

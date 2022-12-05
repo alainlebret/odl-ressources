@@ -12,9 +12,9 @@
 #
 
 CC = gcc
-CPPFLAGS = -Wall -Wextra -ansi -pedantic
-CFLAGS = -I./include -c -g
-LDFLAGS = -o
+CPPFLAGS = -I./include
+CFLAGS = -Wall -Wextra -ansi -pedantic -g
+LDFLAGS =
 SRC_PATH = ./src
 LPATH = $(SRC_PATH)/l
 MPATH = $(SRC_PATH)/m
@@ -22,20 +22,21 @@ DEPS = l/l.h m/m.h
 OBJS =  $(LPATH)/l.o $(MPATH)/m.o $(SRC_PATH)/main.o 
 EXEC = ./bin/main
 
+.PHONY : clean
+
+
 main : $(OBJS)
 	mkdir bin
-	$(CC) $(OBJS) $(LDFLAGS) $(EXEC)
+	$(CC) $(OBJS) -o $(EXEC) $(LDFLAGS) 
 
 main.o : $(SRC_PATH)/main.c
-	$(CC) $(CPPFLAGS) $(CFLAGS) $(SRC_PATH)/main.c $(LDFLAGS) $(SRC_PATH)/main.o
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(SRC_PATH)/main.c -o $(SRC_PATH)/main.o -c
 	
 l.o : $(LPATH)/l.c $(DEPS)
-	$(CC) $(CPPFLAGS) $(CFLAGS) $(MPATH)/l.c $(LDFLAGS) $(LPATH)/l.o
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(MPATH)/l.c -o $(LPATH)/l.o -c
 
 m.o : $(MPATH)/m.c $(DEPS)
-	$(CC) $(CPPFLAGS) $(CFLAGS) $(MPATH)/m.c $(LDFLAGS) $(MPATH)/m.o
-
-.PHONY : clean
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(MPATH)/m.c -o $(MPATH)/m.o -c
 
 clean : 
 	rm $(OBJS) $(EXEC)

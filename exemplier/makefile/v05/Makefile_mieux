@@ -12,21 +12,22 @@
 #
 
 CC = gcc
-CPPFLAGS = -Wall -Wextra -ansi -pedantic
-CFLAGS = -I. -c -g
-LDFLAGS = -o
+CPPFLAGS = -I.
+CFLAGS = -Wall -Wextra -ansi -pedantic -g
+LDFLAGS = 
 OBJS = magic_board.o matrix.o
 EXEC = magic_board
 
+.PHONY : clean
+
 $(EXEC) : $(OBJS)
-	$(CC) $(OBJS) $(LDFLAGS) $(EXEC)
+	$(CC) $(OBJS) -o $(EXEC) $(LDFLAGS)
 
 magic_board.o : magic_board.c matrix.h
-	$(CC) $(CPPFLAGS) $(CFLAGS) magic_board.c
+	$(CC) $(CPPFLAGS) $(CFLAGS) magic_board.c -c
 
 matrix.o : matrix.c matrix.h
-	$(CC) $(CPPFLAGS) $(CFLAGS) matrix.c
+	$(CC) $(CPPFLAGS) $(CFLAGS) matrix.c -c
 
-.PHONY : clean
 clean : 
 	rm $(OBJS) $(EXEC)

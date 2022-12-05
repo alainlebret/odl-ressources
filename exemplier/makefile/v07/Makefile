@@ -13,6 +13,8 @@
 
 CLASS = TestingFrame.class Adapter.class
 
+.PHONY: all clean
+
 all : v7.jar
 
 TestingFrame.class: TestingFrame.java
@@ -23,8 +25,6 @@ Adaptateur.class: Adaptateur.java
 
 v7.jar: $(CLASS)
 	jar -cfe v7.jar TestingFrame $(CLASS)
-
-.PHONY: all clean
 
 clean:
 	rm -f $(CLASS) *.jar

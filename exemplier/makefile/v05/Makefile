@@ -15,10 +15,10 @@ magic_board : magic_board.o matrix.o
 	gcc magic_board.o matrix.o -o magic_board
 
 magic_board.o : magic_board.c matrix.h
-	gcc -Wall -Wextra -ansi -pedantic -I. -c magic_board.c
+	gcc -I. -Wall -Wextra -ansi -pedantic magic_board.c -c 
 
 matrix.o : matrix.c matrix.h
-	gcc -Wall -Wextra -ansi -pedantic -I. -c matrix.c
+	gcc -I. -Wall -Wextra -ansi -pedantic matrix.c -c 
 
 clean : 
 	rm *.o magic_board
