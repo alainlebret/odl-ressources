@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -27,5 +27,5 @@
 
 echo n "Enter the name(s) of the file(s) to remove: "
 read filename
-rm -i $filename
+rm -i "$filename"
 echo "File(s) have been removed."

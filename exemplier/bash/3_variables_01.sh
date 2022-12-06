@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -26,10 +26,14 @@
 # A simple script to show variables and their contents
 MESSAGE="Bonjour"
 message="bonjour"
+nom="Jean"
+PI=3,14159
 
-echo "MESSAGE: " MESSAGE
-echo "message: " message
-echo "$MESSAGE: " ${MESSAGE}
-echo "$message: " ${message}
-echo "\$MESSAGE: " ${MESSAGE}
-echo "\$message: " ${message}
+echo "MESSAGE: " + MESSAGE
+echo "message: " + message
+echo "$MESSAGE: " + ${MESSAGE}
+echo "$message: " + ${message}
+echo "\$MESSAGE: " + ${MESSAGE}
+echo "\$message: " + ${message}
+
+printf "\nBonjour %s !\nSavez-vous que le nombre PI vaut %1.2f ?\n\n" $nom $PI 

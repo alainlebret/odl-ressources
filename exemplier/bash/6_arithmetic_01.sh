@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -36,7 +36,7 @@ echo "y = $y"
 echo "Another way to calculate something can be done using: \$(())"
 echo "\$((8*2+3)) = $((8*2+3))"
 
-echo "Arithmetic operation can also be done using: \$[]"
+echo "Arithmetic operation can also be done using this : \$[] (deprecated)"
 echo "Let VALUE = \$[12+20]"
 VALUE=$[12+20]
 echo "\$[12+20] = $VALUE"

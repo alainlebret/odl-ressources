@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -31,7 +31,7 @@ then
   then
     mkdir trash
   fi
-  mv $1 trash
+  mv -t "$1" trash
 else
   echo "Usage: $0 filename"
   exit 1

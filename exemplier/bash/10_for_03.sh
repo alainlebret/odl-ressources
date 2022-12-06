@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -35,7 +35,7 @@ echo "${LIST}"
 
 for file in *
 	do
-		name=${file%%.*}
+		nom=${file%%.*}
 		extension=${file##*.}
 		echo "$extension"
 		LIST="$LIST $file"
@@ -44,4 +44,4 @@ for file in *
 echo "$LIST"
 echo " "
 nb="$( echo "$LIST" | wc -w ) files"
-echo "$nb"
+echo "${nb}"

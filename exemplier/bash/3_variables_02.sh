@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -27,10 +27,10 @@
 
 BAD="excellent"
 UNIX="Unix is a $BAD system!"
-echo $UNIX
+echo "$UNIX"
 
 echo ""
 
 BAD='excellent'
 WINDOWS='Windows is a $BAD system!'
-echo $WINDOWS
+echo "$WINDOWS"

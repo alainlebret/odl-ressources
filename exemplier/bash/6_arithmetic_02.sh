@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -25,8 +25,8 @@
 
 # Another simple script to show some arithmetic operations
 
-echo -n "Enter the first number: "; read x
-echo -n "Enter the second number: "; read y
+echo -n "Enter the first number: "; read -r x
+echo -n "Enter the second number: "; read -r y
 
 sum=$(($x + $y))
 difference=$(($x - $y))

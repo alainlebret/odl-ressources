@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -23,8 +23,10 @@
 # limitations under the License.
 #
 
-# A script that says hello using many string delimiters
-echo "bonjour à vous"
-echo "bonjour" "à" "vous"
-echo 'bonjour à vous'
-echo bonjour à vous
+# A script that says hello using the echo command and different string delimiters
+echo "Bonjour à vous !"
+echo "Bonjour" "à" "vous" "!"
+echo 'Bonjour à vous !'
+echo Bonjour à vous !
+echo \"Bonjour à vous !\"
+echo \'Bonjour à vous !\'

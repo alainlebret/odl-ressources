@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -28,4 +28,4 @@
 echo "Let BACKUP=./backup-\$(date +%d-%m-%y).tar.gz"
 BACKUP=./backup-$(date +%d-%m-%y).tar.gz
 echo "Then we can create automatically some tarball with a new date:"
-tar -czf ${BACKUP} $HOME/Desktop/os/courses/examples/shell
+tar -czf "${BACKUP}" "$HOME/Desktop/os/courses/examples/shell"

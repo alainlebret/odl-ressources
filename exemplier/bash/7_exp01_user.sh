@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -26,7 +26,7 @@
 # A simple script to show how to test an expression using if
 
 echo -n "Enter your username: "
-read username
+read -r username
 if [ "$username" = "$USER" ]
 then 
   echo "Hello $username. How do you feel today?"

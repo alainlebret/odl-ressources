@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -26,9 +26,9 @@
 # A simple script to show the command substitution
 
 COMMAND1=`ls`
-echo $COMMAND1
+echo "$COMMAND1"
 
 echo "It can also be done using:"
 
 COMMAND2=$(ls)
-echo $COMMAND2
+echo "$COMMAND2"

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -33,9 +33,9 @@ else
   shift	# Shift parameters by one
   while [ $# -gt 0 ] # The new parameter ($1) is the first file
   do
-    grep ${word} $1 > /dev/null
+    grep "${word}" "$1" > /dev/null
     if [ $? -eq 0 ] ; then # If grep has found the word
-      emacs -nw $1 & # we edit the file with emacs
+      emacs -nw "$1" & # we edit the file with emacs
     fi
     shift # Shift parameters again
   done
