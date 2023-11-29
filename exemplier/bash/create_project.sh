@@ -8,7 +8,7 @@
 # Unix System Programming Examples / Exemplier de programmation système Unix
 # "Shell bash" / "Interpréteur de commandes bash"
 #
-# Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -36,17 +36,28 @@ ENTETE_C="/*
  * No portion of this document may be reproduced, copied
  * or revised without written permission of the authors.
  */"
- 
+
+# Used by customized_makefile()
+ CC="gcc"
+ CFLAGS="-Wall -Wextra -ansi -pedantic -g"
+ INCLUDE_DIR="include"
+ LIBS="-lm"
+ EXEC="prog.exe"
+
+# Example of a directory configuration array
+# Used by initialize_rep()
+DIR_STRUCTURE=("src" "include" "doc" "tests" "bin" "bin/tests" "etc" "lib")
+
 # All errors are logged 
 exec 2>>/tmp/create_project.log
  
-#
-# 
-#
+# Usage example:
+# error "Invalid project path" "create_project()"
 function error() { 
-    echo "Erreur : $1!" >&2 
+    echo "Error in function $2: $1!" >&2 
     exit 1 
 } 
+
 
 #
 # 
@@ -56,22 +67,23 @@ function help() {
     exit 0
 } 
 
-#
-# 
-#
 function initialize_rep() {
-   if [ ! -e "$PROJECT_PATH" ]; then
-      mkdir "$PROJECT_PATH"
-      for repertory in bin/test doc etc include lib src/test
-         do
-            mkdir -p "$PROJECT_PATH/$repertory"
-         done
-      return 0
-   else
-      echo "Le projet existe déjà"
-      return 1
-   fi
+    if [ ! -e "$PROJECT_PATH" ]; then
+       if ! mkdir "$PROJECT_PATH"; then
+          echo "La création du dossier pour le projet a échoué."
+          return 1
+       fi
+       for dir in "${DIR_STRUCTURE[@]}"; do
+          mkdir -p "$PROJECT_PATH/$dir"
+		  touch "$PROJECT_PATH/$dir/.gitkeep"
+       done
+       return 0
+    else
+       echo "Le projet existe déjà"
+       return 1
+ fi
 }
+
 
 #
 # 
@@ -79,52 +91,76 @@ function initialize_rep() {
 function create_README() {
    cat > "$PROJECT_PATH/README.md"<<EOF
 # Projet "$PROJECT_PATH"
-bla bla bla
-bli bli bli
+## Description
+
+A complete description of the project...
+
+## Installation
+
+A complete description of its installation...
+
+```
+make ...
+```
+
+## Usage 
+
+A description of its usage...
+
+## Dependancies
+
+List of dependances... 
+
+## Authors
+
+"$AUTHORS"
+$(date)
 EOF
 }
 
-#
-# 
-#
-function create_INSTALL() {
-   cat > "$PROJECT_PATH/INSTALL.txt"<<EOF
-How to install this program
- 
-bla bla bla
-bli bli bli
-EOF
-}
 
-#
-# 
-#
-function create_AUTHORS() {
-   cat > "$PROJECT_PATH/AUTHORS.txt"<<EOF
-$AUTHORS
-EOF
+function customize_makefile() {
+    echo "Spécifiez le compilateur (par défaut : gcc) :"
+    read -r input
+    CC=${input:-gcc}
+
+    echo "Spécifiez les options du compilateur (par défaut : -Wall -Wextra -ansi -pedantic -g) :"
+    read -r input
+    CFLAGS=${input:--Wall -Wextra -ansi -pedantic -g}
+
+    echo "Spécifiez le dossier contenant les entêtes (par défaut : include) :"
+    read -r input
+    INCLUDE_DIR=${input:-include}
+
+    echo "Spécifiez les bibliothèques utilisées (par défaut : lm) :"
+    read -r input
+    LIBS=${input:--lm}
+
+    echo "Spécifiez le nom du programme exécutable (par défaut : prog.exe) :"
+    read -r input
+    EXEC=${input:-prog.exe}
 }
 
 #
 # 
 #
 function create_Makefile() {
-   echo "CC       = gcc
+   echo "CC       = ${CC}
 RM       = rm
 DOC      = doxygen
-CPPFLAGS = -I./include
-CFLAGS   = -Wall -Wextra -ansi -pedantic -g
-LDFLAGS  = -L ./lib # Add the libraries you will use, e.g. -lm
+CPPFLAGS = -I ${INCLUDE_DIR}
+CFLAGS   = ${CFLAGS}
+LDFLAGS  = -L ./lib ${LIBS}
 
 .PHONY: all doc clean distclean
 
-all: ./bin/prog.exe
+all: ./bin/${EXEC}
 
-./bin/prog.exe: ./src/main.o # And others .o
+./bin/${EXEC}: ./src/main.o # And others .o
 	\$(CC) \$< -o \$@ \$(LDFLAGS)
 
 ./src/%.o: ./src/%.c
-	\$(CC) \$(CPPFLAGS) \$(CFLAGS) \$< -o \$@ -c
+	\$(CC) \$(CPPFLAGS) \$(${CFLAGS}) \$< -o \$@ -c
 
 doc:
 	-@\$(DOC) doc/Doxyfile
@@ -133,7 +169,7 @@ clean:
 	-@\$(RM) ./src/*.o
 
 distclean: clean
-	-@\$(RM) ./bin/prog.exe" > "$PROJECT_PATH"/Makefile
+	-@\$(RM) ./bin/${EXEC}" > "$PROJECT_PATH"/Makefile
 }
 
 #
@@ -180,19 +216,29 @@ function copy_minunit() {
 	wget -P "$PROJECT_PATH/src/test" https://raw.githubusercontent.com/siu/minunit/master/minunit_example.c
 }
 
-#
-# 
-#
+function validate_project_path() {
+    if [[ -z "$1" ]]; then
+        echo "Entrée invalide : le nom du projet ne peut être vide."
+        return 1
+    elif [[ $1 =~ [^a-zA-Z0-9_-] ]]; then
+        echo "Entrée invalide : le nom du projet contient des caractères spéciaux."
+        return 1
+    fi
+    return 0
+}
+
 function create_project() {
    echo "Entrer le nom du nouveau projet :"
    read -r PROJECT_PATH
+   if ! validate_project_path "$PROJECT_PATH"; then
+       return 1
+   fi
    initialize_rep
    if [ "$?" == 0 ] 
    then
       create_README
-      create_INSTALL
-      create_AUTHORS
       create_main
+      customize_makefile
       create_Makefile
 	  create_Doxyfile
 	  copy_minunit
@@ -213,9 +259,8 @@ function open_project() {
       if [ "$?" == 0 ] 
       then
          create_README
-         create_INSTALL
-         create_AUTHORS
          create_main
+         customize_makefile
          create_Makefile
    	     create_Doxyfile
    	     copy_minunit
@@ -249,7 +294,7 @@ function create_archive() {
       cd "${PROJECT_PATH}" || return ; make distclean; cd .. ;   
       tar czf "$PROJECT_PATH-$author1-$author2-$currentdate.tgz" "$(basename "$PROJECT_PATH")"
    else
-      error "Projet courant inexistant !" 
+      error "Projet courant inexistant !" "create_archive()"
    fi
    echo "Archive du projet courant créée."
 }
@@ -306,9 +351,13 @@ function menu() {
 }
 
 # Début du script
-if [ "$1" = "-h" ] 
-then
-   help
+if [ "$#" -gt 1 ]; then
+    echo "Usage incorrect. Seule l'option '-h' est acceptée."
+    exit 1
+fi
+
+if [ "$1" = "-h" ]; then
+    help
 fi
 
 menu
