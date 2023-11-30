@@ -9,21 +9,19 @@
  *
  * Chapter "Compilation" / Chapitre "Compilation"
  *
- * Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0
- * @date      1995-2017
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file buggy.c
+ * @brief This buggy program highlights the use of precompiler options: -Wall, 
+ * -Wextra, -ansi and -pedantic.
  *
- * A program to highlight the use of precompiler options: \c -Wall, 
- * \c -Wextra, \c -ansi and \c -pedantic.
+ * @author Alain Lebret <alain.lebret@ensicaen.fr>
+ * @date 1995-2023
+ * @version 1.0
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 

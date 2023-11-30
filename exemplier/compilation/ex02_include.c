@@ -8,24 +8,20 @@
  *
  * Chapter "Compilation" / Chapitre "Compilation"
  *
- * Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0
- * @date      1995-2017
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file ex02_include.c
+ * @brief A testing program to highlight the precompiling step, particularly the
+ * inclusion of header files. 
  *
- * A testing program to highlight the precompiling step, particularly the
- * inclusion of header files. Compile using command:
- * \code{.bash}
+ * Compile using command:
  * gcc -E -Wall -Wextra -ansi -pedantic ex02_include.c > ex02_include.i
- * \endcode
+ *
+ * @author Alain Lebret <alain.lebret@ensicaen.fr>
+ * @date 1995-2023
+ * @version 1.0
  */
 
 #include "ex02_include.h"

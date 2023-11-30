@@ -12,15 +12,12 @@
  */
 
 /**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0
- * @date      1995-2017
- */
-
-/**
  * @file ex01_first.c
+ * @brief A first testing program to highlight the use of the compiler.
  *
- * A first testing program to highlight the use of the compiler.
+ * @author Alain Lebret <alain.lebret@ensicaen.fr>
+ * @date 1995-2023
+ * @version 1.0
  */
 
 int main(void) {
