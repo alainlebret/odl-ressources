@@ -8,19 +8,17 @@
  *
  * Chapter "Final Product" / Chapitre "Produit final"
  *
- * Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0 (1995)
- * @version   1.0.1 (2016)
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file testargs.c
  * 
- * Test how to pass arguments to the \em main() function.
+ * Test how to pass arguments to the main() function.
+ *
+ * @author    Alain Lebret <alain.lebret@ensicaen.fr>
+ * @version   1.0 (1995)
+ * @version   1.0.1 (2016)
  */
 
 #include <stdio.h>
@@ -40,5 +38,5 @@ int main(int argc, char *argv[], char *env[]) {
 		printf("argv[%d] : %s\n", counter, argv[counter]);
 	}
 
-	exit(EXIT_SUCCESS);
+	return 0;
 }
