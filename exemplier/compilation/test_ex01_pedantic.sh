@@ -10,7 +10,7 @@
 #
 # Chapter "Compilation" / Chapitre "Compilation"
 #
-# Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 
 echo "Compile with warnings, ANSI normalisation and pedantic..."

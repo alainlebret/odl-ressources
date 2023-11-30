@@ -6,7 +6,7 @@
 
 [//]: # (------------------------- E N S I C A E N ----------------------------)
 
-[//]: # (----------------------- Alain Lebret, 2020 ---------------------------)
+[//]: # (----------------------- Alain Lebret, 2023 ---------------------------)
 
 [//]: # (----------------------------------------------------------------------)
 
@@ -19,4 +19,4 @@ These examples highlight the compilation steps:
 - assembling
 - linking
 
-as libraries compilation.
+as librariy compilation.
