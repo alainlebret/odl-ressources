@@ -8,19 +8,17 @@
  *
  * Chapter "Debugging, testing, profiling" / Chapitre "Mise au point"
  *
- * Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0 (1995)
- * @version   1.0.1 (2016)
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file f.c
  *
  * Examples to highlight using of the debugger, profiler, etc.
+ *
+ * @author    Alain Lebret <alain.lebret@ensicaen.fr>
+ * @version   1.0 (1995)
+ * @version   1.0.1 (2016)
  */
 
 #include <stdio.h>
@@ -36,7 +34,9 @@
  */
 void f1(int upperBound) {
 	int counter;
-	int jumps = 0;
+	int jumps;
+	
+	jumps = 0;
 
 	for (counter = 0; counter < upperBound; counter += 2) {
 		jumps++;
@@ -45,14 +45,16 @@ void f1(int upperBound) {
 
 /**
  * Implementation of a memory leak when trying to allocate n integers in memory
- * without free.
+ * without free (tab is not freed).
  * @param n Size of the memory allocation
  * @param x Integer to put at the head of the allocated memory
  * @return CONSTANT (23) if the first integer within the allocated memory is
  * equal to 3, else return UNDEFINED (-1)
  */
 int f2(int n, int x) {
-	int *tab = (int *) malloc(n * sizeof(int));
+	int *tab;
+	
+	tab = (int *)malloc(n * sizeof(int));
 
 	tab[0] = x;
 	if (tab[0] == 3) {
@@ -68,7 +70,9 @@ int f2(int n, int x) {
  * @return The angle in radians
  */
 double f3(int angle_degres) {
-	double angle_radians = M_PI * angle_degres / 180;
+	double angle_radians;
+	
+	angle_radians = M_PI * angle_degres / 180;
 
 #ifdef DEBUG
 	fprintf(stderr, "--- Ceci est une trace ---\n");

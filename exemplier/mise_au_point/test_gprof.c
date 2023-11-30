@@ -8,40 +8,26 @@
  *
  * Chapter "Debugging, testing, profiling" / Chapitre "Mise au point"
  *
- * Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0 (1995)
- * @version   1.0.1 (2016)
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file test_gprof.c
  * 
- * Testing \em f5() and using the GNU profiler \em gprof.
+ * Testing f5() and using the GNU profiler gprof.
  *
- * Compile with:
- * \code{.bash}
- * gcc -pg -Wall -Wextra - ansi -pedantic test_gprof.c -o test_gprof
- * \endcode
+ * Compile with: gcc -pg -Wall -Wextra - ansi -pedantic test_gprof.c -o test_gprof
  *
- * Execute:
- * \code{.bash}
- * ./test_gprof
- * \endcode
+ * Execute: ./test_gprof
  *
- * This produces a file named \em gmon.out
- * Re-execute with:
- * \code{.bash}
- * gprof ./test_gprof > gmon.txt
- * \endcode
+ * This produces a file named gmon.out
+ * Re-execute with: gprof ./test_gprof > gmon.txt
+ * 
+ * Display profiling results: more gmon.txt
  *
- * Display profiling results:
- * \code{.bash}
- * more gmon.txt
- * \endcode
+ * @author    Alain Lebret <alain.lebret@ensicaen.fr>
+ * @version   1.0 (1995)
+ * @version   1.0.1 (2016)
  */
 #include <stdio.h>
 #include <stdlib.h>

@@ -8,13 +8,10 @@
  *
  * Chapter "Debugging, testing, profiling" / Chapitre "Mise au point"
  *
- * Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0 (1995)
- * @version   1.0.1 (2016)
  */
 
 /**
@@ -22,20 +19,15 @@
  * 
  * Verify the memory leak problem using valgrind.
  *
- * Compile with:
- * \code{.bash}
- * gcc -g -Wall -Wextra - ansi -pedantic test_memory.c -o test_memory
- * \endcode
+ * Compile with: gcc -g -Wall -Wextra - ansi -pedantic test_memory.c -o test_memory
  *
- * Execute with:
- * \code{.bash}
- * valgrind ./test_memory
- * \endcode
+ * Execute with: valgrind ./test_memory
  *
- * Re-execute with:
- * \code{.bash}
- * valgrind --leak-check=full ./test_memory
- * \endcode
+ * Re-execute with: valgrind --leak-check=full ./test_memory
+ *
+ * @author    Alain Lebret <alain.lebret@ensicaen.fr>
+ * @version   1.0 (1995)
+ * @version   1.0.1 (2016)
  */
 #include <stdio.h>
 #include <stdlib.h>
