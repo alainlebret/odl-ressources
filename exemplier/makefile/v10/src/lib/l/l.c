@@ -8,22 +8,25 @@
  *
  * Chapter "The make command" / Chapitre "Commande make"
  *
- * Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0 (1995)
- * @version   1.0.1 (2016)
  */
 
 /**
  * @file l.c
  *
  * Example to highligh projects with a more complex structure.
+ *
+ * @author    Alain Lebret <alain.lebret@ensicaen.fr>
+ * @version   1.0 (1995)
+ * @version   1.0.1 (2016)
  */
-#include <l/l.h>
+
 #include <stdio.h>
+
+#include "l/l.h"
 
 void l(ls_t vls) {
 	printf("Je suis dans l\n");

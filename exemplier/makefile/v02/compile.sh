@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -10,15 +10,15 @@
 #
 # Chapter "The make command" / Chapitre "Commande make"
 #
-# Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
-
-CPPFLAGS='-Wall -Wextra -ansi -pedantic'
+CPPFLAGS='-I.'
+CFLAGS='-Wall -Wextra -ansi -pedantic'
 MAIN='magic_board'
 
 # Compilation of source files to object ones
-gcc $CPPFLAGS -I. -c matrix.c
-gcc $CPPFLAGS -I. -c $(MAIN).c
+gcc $CPPFLAGS $CFLAGS -c matrix.c
+gcc $CPPFLAGS $CFLAGS -c $(MAIN).c
 
 # Linking of object files and production of the executable
 gcc $(MAIN).o matrix.o -o $(MAIN)

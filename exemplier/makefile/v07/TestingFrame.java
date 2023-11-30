@@ -8,7 +8,7 @@
  *
  * Chapter "The make command" / Chapitre "Commande make"
  *
- * Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
+ * Copyright (C) 1995-2027 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 import java.awt.Frame;
 import java.awt.Graphics;
@@ -19,7 +19,7 @@ import java.awt.event.WindowEvent;
  
 /**
  * TestingFrame.java
- * @author Alain Lebret <alain.lebret@ensicaen.fr>
+ * @author Alain Lebret
  * @version	1.0 – 1998
  */
 public class TestingFrame extends Frame implements MouseListener {

@@ -12,16 +12,15 @@
  */
 
 /**
+ * @file magic_board.c
+ * 
+ * Example from a laboratory exercise.
+ *
  * @author    Alain Lebret <alain.lebret@ensicaen.fr>
  * @version   1.0
  * @date      2016
  */
 
-/**
- * @file magic_board.c
- * 
- * Example from a laboratory exercise.
- */
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -79,5 +78,5 @@ int main(void) {
 	fill(matrix, NMAX);
 	display(matrix, NMAX);
 
-	exit(EXIT_SUCCESS);
+	return 0;
 }

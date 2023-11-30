@@ -8,13 +8,7 @@
  *
  * Chapter "The make command" / Chapitre "Commande make"
  *
- * Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0
- * @date      2016
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
@@ -22,7 +16,12 @@
  *
  * Example from a laboratory work exercise. This file contains prototypes of
  * some matrix manipulations.
+ *
+ * @author    Alain Lebret <alain.lebret@ensicaen.fr>
+ * @version   1.0
+ * @date      2016
  */
+
 #ifndef EXEMPLIER_MATRIX_H
 #define EXEMPLIER_MATRIX_H
 

@@ -8,10 +8,12 @@
 #
 # Chapter "The make command" / Chapitre "Commande make"
 #
-# Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 
 CLASS = TestingFrame.class Adapter.class
+
+.PHONY: all clean
 
 all : v7.jar
 
@@ -23,8 +25,6 @@ Adaptateur.class: Adaptateur.java
 
 v7.jar: $(CLASS)
 	jar -cfe v7.jar TestingFrame $(CLASS)
-
-.PHONY: all clean
 
 clean:
 	rm -f $(CLASS) *.jar

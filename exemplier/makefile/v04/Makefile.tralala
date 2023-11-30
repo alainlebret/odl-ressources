@@ -8,17 +8,17 @@
 #
 # Chapter "The make command" / Chapitre "Commande make"
 #
-# Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 
 magic_board : magic_board.o matrix.o
 	gcc magic_board.o matrix.o -o magic_board
 
 magic_board.o : magic_board.c matrix.h
-	gcc -Wall -Wextra -ansi -pedantic -I. -c magic_board.c
+	gcc -I. -Wall -Wextra -ansi -pedantic -c magic_board.c
 
 matrix.o : matrix.c matrix.h
-	gcc -Wall -Wextra -ansi -pedantic -I. -c matrix.c
+	gcc -I. -Wall -Wextra -ansi -pedantic -c matrix.c
 
 clean : 
 	rm *.o magic_board

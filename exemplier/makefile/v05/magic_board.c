@@ -8,24 +8,24 @@
  *
  * Chapter "The make command" / Chapitre "Commande make"
  *
- * Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0
- * @date      2016
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file magic_board.c
 
- * Example from a labory exercise. This file only contains a _em main()
- * function. Other functions have been moved to \em matrix.c and their
- * prototypes to \em matrix.h.
+ * Example from a labory exercise. This file only contains a main()
+ * function. Other functions have been moved to matrix.c and their
+ * prototypes to matrix.h.
+ *
+ * @author    Alain Lebret <alain.lebret@ensicaen.fr>
+ * @version   1.0
+ * @date      2016
  */
+
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "matrix.h"
 
 int main(void) {
@@ -36,5 +36,5 @@ int main(void) {
 	fill(matrix, NMAX);
 	display(matrix, NMAX);
 
-	exit(EXIT_SUCCESS);
+	return 0;
 }

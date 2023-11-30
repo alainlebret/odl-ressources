@@ -8,7 +8,7 @@
 #
 # Chapter "The make command" / Chapitre "Commande make"
 #
-# Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 MAKE=/usr/bin/make
 SRC_PATH = src

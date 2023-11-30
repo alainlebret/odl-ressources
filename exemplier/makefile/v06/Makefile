@@ -8,27 +8,28 @@
 #
 # Chapter "The make command" / Chapitre "Commande make"
 #
-# Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 
 CC = gcc
-CPPFLAGS = -Wall -Wextra -ansi -pedantic
-CFLAGS = -I. -c -g
-LDFLAGS = -o
+CPPFLAGS = -I.
+CFLAGS = -Wall -Wextra -ansi -pedantic -g
+LDFLAGS =
 OBJS = magic_board.o matrix.o
 EXEC = magic_board
 DOXYGEN = doxygen
 
+.PHONY : clean doc
+
 $(EXEC) : $(OBJS)
-	$(CC) $(OBJS) $(LDFLAGS) $(EXEC)
+	$(CC) $(OBJS) -o $(EXEC) $(LDFLAGS) 
 
 magic_board.o : magic_square.c matrix.h
-	$(CC) $(CPPFLAGS) $(CFLAGS) magic_board.c
+	$(CC) $(CPPFLAGS) $(CFLAGS) magic_board.c -c
 
 matrix.o : matrix.c matrix.h
-	$(CC) $(CPPFLAGS) $(CFLAGS) matrix.c
+	$(CC) $(CPPFLAGS) $(CFLAGS) matrix.c -c
 
-.PHONY : clean doc
 doc :
 	$(DOXYGEN) Doxyfile
 clean :

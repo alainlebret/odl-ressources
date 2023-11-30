@@ -8,23 +8,23 @@
  *
  * Chapter "The make command" / Chapitre "Commande make"
  *
- * Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0 (1995)
- * @version   1.0.1 (2016)
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file main.c
  *
  * Example to highligh projects with a more complex structure.
+ *
+ * @author    Alain Lebret <alain.lebret@ensicaen.fr>
+ * @version   1.0 (1995)
+ * @version   1.0.1 (2016)
  */
+
 #include <stdlib.h>
-#include <l/l.h>
-#include <m/m.h>
+
+#include "l/l.h"
+#include "m/m.h"
 
 int main(void) {
 	ls_t ll;
@@ -33,5 +33,5 @@ int main(void) {
 	l(ll);
 	m(mm);
 
-	exit(EXIT_SUCCESS);
+	return 0;
 }
