@@ -8,7 +8,7 @@
 # Unix System Programming Examples / Exemplier de programmation système Unix
 # "Shell bash" / "Interpréteur de commandes bash"
 #
-# Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,12 +25,22 @@
 
 # A simple script to show the difference between simple and double quotes
 
+# Double quotes: Variable values are expanded
 BAD="excellent"
 UNIX="Unix is a $BAD system!"
-echo "$UNIX"
+echo "$UNIX"  # Output: Unix is an excellent system!
 
 echo ""
 
-BAD='excellent'
-WINDOWS='Windows is a $BAD system!'
-echo "$WINDOWS"
+# Single quotes: Variables are treated as literal strings
+BAD="terrible"
+WINDOWS='Ms-Windows is a $BAD system!'
+echo "$WINDOWS"  # Output: Ms-Windows is a $BAD system!
+
+# Demonstrating escaped characters
+echo "Using double quotes with escaped characters: \$BAD"
+echo 'Using single quotes with escaped characters: \$BAD'
+
+# Demonstrating command substitution
+echo "Command substitution with double quotes: $(date)"
+echo 'Command substitution with single quotes: $(date)'
