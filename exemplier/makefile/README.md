@@ -1,29 +1,19 @@
-[//]: # (----------------------------------------------------------------------)
+# Makefile Examples
 
-[//]: # (                           ENSICAEN                                   )
+## Introduction
+This directory is dedicated to examples and tutorials on using Makefiles in software development. These examples are part of the Software Development Tools course at ENSICAEN, aimed at teaching students how to automate the build process of their software projects efficiently.
 
-[//]: # (                  6 Boulevard Maréchal Juin                           )
+## Contents
+Within the `makefile` directory, you'll find various Makefile templates and examples. These are designed to demonstrate the creation and usage of Makefiles in different scenarios, ranging from simple single-file programs to more complex multi-file projects.
 
-[//]: # (                     F-14050 Caen Cedex                               )
-
-[//]: # (       Examples from the course "Software development tools"          )
-
-[//]: # (      Exemplier du cours "Outils de développement logiciel" ODL       )   
-
-[//]: # (        Chapter "The make command" / Chapitre "Commande make"         )
- 
-[//]: # (     Copyright 1995-2023 Alain Lebret alain.lebret at ensicaen.fr     ) 
-	
-[//]: # (----------------------------------------------------------------------)
-
-## v1
+### v1
 --------------------------------------------------------------------------------
 In this version, the program is concentrated in a single file called
 `magic_square.c` that you can compile as follows:
 
     $ gcc -Wall -Wextra -ansi -pedantic magic_square.c -o magic_square
 
-## v2
+### v2
 --------------------------------------------------------------------------------
 In this second version, the program is divided into three files:
 `magic_square.c` that contains the main () function, and files `matrix.h` and
@@ -52,7 +42,7 @@ instead of:
 
     #include "matrix.h"
 
-## v3
+### v3
 --------------------------------------------------------------------------------
 In this third version, we create a Makefile to compile the program using three
 rules:
@@ -65,7 +55,7 @@ The program generation is obtained by running the command:
 
     $ make magic_square
 
-## v4
+### v4
 --------------------------------------------------------------------------------
 In this fourth version we create a file named `Makefile.tralala` to compile
 the program using the three previous rules.
@@ -85,7 +75,7 @@ rules, so it will be run by default:
 
     $ make -f Makefile.tralala
 
-## v5
+### v5
 --------------------------------------------------------------------------------
 In this fifth version, we implement variables in the file `Makefile.mieux`.
 
@@ -96,7 +86,7 @@ The program generation is obtained by running the command:
 The `.PHONY` target indicates to `make` that the `clean` target should not be
 considered as a file.
 
-## v6
+### v6
 --------------------------------------------------------------------------------
 In this sixth version, we add a rule to produce documentation using the doxygen
 program. This is obtained by running the command:
@@ -106,7 +96,7 @@ program. This is obtained by running the command:
 The `.PHONY` target also indicates that the target `doc` should not be considered
 as a file.
 
-## v7
+### v7
 --------------------------------------------------------------------------------
 In this seventh version, we use `make` to compile Java files. You just have to
 execute the following command:
@@ -117,7 +107,7 @@ Then, to run the Java program, just enter:
 
     $ java -jar v7.jar TestingFrame
 
-## v8
+### v8
 --------------------------------------------------------------------------------
 In this eighth version, we consider a more complex project with several
 subdirectories as below:
@@ -142,11 +132,27 @@ subdirectories as below:
 Object files are generated in the subdirectories containing `.c` files and the
 executable will be produced in the `bin` subdirectory.
 
-## v9
+### v9
 --------------------------------------------------------------------------------
 In this ninth version, we use the predefined macros `$@` and `$^` which
 respectively correspond to the target name and the list of dependency files.
 
-## multi-makefiles
+### multi-makefiles
 --------------------------------------------------------------------------------
 Here, we use the `include` directive.
+
+## How to Use
+To work with these Makefile examples:
+1. Clone the repository: `git clone https://github.com/alainlebret/odl.git`
+2. Navigate to the `makefile` directory: `cd odl/exemplier/makefile`
+3. Examine each Makefile and its corresponding source code to understand its structure and functionality.
+4. Use the `make` command to execute the Makefiles and build the projects.
+
+
+## Prerequisites
+- Basic understanding of the C programming language and Unix/Linux command line.
+- GNU Make tool installed on your system.
+
+## License
+The examples in this directory are provided under the Apache 2.0 license. For more details, see the LICENSE file in the root directory.
+
