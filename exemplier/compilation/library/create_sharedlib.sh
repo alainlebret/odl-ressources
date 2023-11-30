@@ -9,11 +9,11 @@
 #
 # Chapter "Compilation" / Chapitre "Compilation"
 #
-# Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 
-echo "Compiling with position independant code (option -fpic)"
-gcc -c -Wall -Wextra -ansi -pedantic -fpic bib.c
+echo "Compiling with position independant code (option -fPIC)"
+gcc -c -Wall -Wextra -ansi -pedantic -fPIC bib.c
 
 echo "... only for codes in the shared library of course."
 gcc -c -Wall -Wextra -ansi -pedantic main.c

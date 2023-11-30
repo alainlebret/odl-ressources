@@ -8,20 +8,17 @@
  *
  * Chapter "Compilation" / Chapitre "Compilation"
  *
- * Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0
- * @date      1995-2017
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file ex02_ifdef.c
- *
- * A Testing program to highlight the use of precompiler options. Compile without
+ * @brief A Testing program to highlight the use of precompiler options. Compile without
  * and with the gcc option "-DINCLUSION" to show or not the warning messages.
+ *
+ * @author Alain Lebret <alain.lebret@ensicaen.fr>
+ * @date 1995-2023
+ * @version 1.0
  */
 
 #ifdef INCLUSION

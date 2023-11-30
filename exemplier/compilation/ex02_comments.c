@@ -8,23 +8,19 @@
  *
  * Chapter "Compilation" / Chapitre "Compilation"
  *
- * Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0
- * @date      1995-2017
- */
-
-/**
- * @file ex02_comments.c
+ * @file ex01_warnings.c
+ * @brief A testing program to highlight the precompiling step. 
  *
- * A testing program to highlight the precompiling step. Compile using option
- * \c -E:
- * \code{.bash}
+ * Compile using option -E:
  * gcc -E -Wall -Wextra -ansi -pedantic ex02_comments.c > ex02_comments.i
- * \endcode
+ *
+ * @author Alain Lebret <alain.lebret@ensicaen.fr>
+ * @date 1995-2023
+ * @version 1.0
  */
 
 int main(void) {

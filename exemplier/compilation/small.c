@@ -8,29 +8,25 @@
  *
  * Chapter "Compilation" / Chapitre "Compilation"
  *
- * Copyright (C) 1995-2018 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0
- * @date      1995-2018
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file small.c
+ * @brief A testing program to highlight the optimizing step. 
  *
- * A testing program to highlight the optimizing step. Compile using following
- * commands:
- * \code{.bash}
+ * Compile using following commands:
  * gcc -Wall -Wextra -pedantic -std=c99 -O0 small.c -o small_O0
  * gcc -Wall -Wextra -pedantic -std=c99 -O1 small.c -o small_O1
  * gcc -Wall -Wextra -pedantic -std=c99 -O2 small.c -o small_O2
  * gcc -Wall -Wextra -pedantic -std=c99 -O3 small.c -o small_O3
  * gcc -Wall -Wextra -pedantic -std=c99 -Os small.c -o small_Os
- * \endcode
+ *
+ * @author Alain Lebret <alain.lebret@ensicaen.fr>
+ * @date 1995-2023
+ * @version 1.0
  */
+
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>

@@ -8,20 +8,17 @@
  *
  * Chapter "Compilation" / Chapitre "Compilation"
  *
- * Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0
- * @date      1995-2017
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file ex01_warnings.c
+ * @brief A testing program to highlight the use of precompiler options: -Wall and
+ * -Wextra.
  *
- * A testing program to highlight the use of precompiler options: \c -Wall and
- * \c -Wextra.
+ * @author Alain Lebret <alain.lebret@ensicaen.fr>
+ * @date 1995-2023
+ * @version 1.0
  */
 
 int main(void) {
