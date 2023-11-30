@@ -1,5 +1,3 @@
-# Compilation Examples
-
 # Edition Examples
 
 ## Introduction
