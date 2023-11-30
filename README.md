@@ -2,7 +2,7 @@
 
 ## Outils de développement logiciel
 
-Ce dépôt est une collection de ressources, d'exemples de code et de documentation initialement utilisée dans le cours "Outils de développement logiciel" à l'[ENSICAEN](http://www.ensicaen.fr) depuis 2016. Il couvre un large éventail de sujets incluant les scripts Bash, la programmation en C, les techniques de débogage, les tests unitaires, et plus encore. Le dépôt est conçu pour servir de ressource éducative pour les étudiants.
+Ce dépôt consiste en une collection de ressources, d'exemples de code et de documentation initialement utilisée dans le cours "Outils de développement logiciel" à l'[ENSICAEN](http://www.ensicaen.fr) depuis 2016. Il couvre un large éventail de sujets incluant les scripts Bash, la programmation en C, les techniques de débogage, les tests unitaires, et plus encore. Le dépôt est conçu pour servir de ressource éducative pour les étudiants.
 
 ### Licences
 
