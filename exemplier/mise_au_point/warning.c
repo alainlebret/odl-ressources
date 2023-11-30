@@ -8,12 +8,7 @@
  *
  * Chapter "Working out" / Chapitre "Mise au point"
  *
- * Copyright (C) 2016 Alain Lebret (alain.lebret (at) ensicaen.fr)
- */
-
-/**
- * @author Alain Lebret <alain.lebret@ensicaen.fr>
- * @version	0.0.1 – 2016-10-01
+ * Copyright (C) 2023 Alain Lebret (alain.lebret (at) ensicaen.fr)
  */
 
 /**
@@ -40,16 +35,21 @@
  * warning.c:64:1: Definition of test_f2
  * 
  * Finished checking --- 6 code warnings
+ *
+ * @author Alain Lebret <alain.lebret@ensicaen.fr>
+ * @version	0.0.1 – 2016-10-01
  */
 
 #include <stdio.h>
 #include <limits.h>
 
 long f1() {
-	long result = LONG_MAX;
+	long result;
+	
+	result = LONG_MAX;
 
 	result -= 10;
-	printf("In f1, result has the value : %ld\n", result);
+	printf("In f1, result has the value: %ld\n", result);
 	
 	return result;
 }
@@ -57,7 +57,7 @@ long f1() {
 int f2(int param) {
 	int result;
 	
-	printf("In f2, param has the value : %d\n", param);
+	printf("In f2, param has the value: %d\n", param);
 	
 	result = param - 10;
 	
@@ -65,17 +65,20 @@ int f2(int param) {
 }
 
 void test_f1() {
-	int value1 = f1();
-	long best_value1 = f1();
+	int value1;
+	long best_value1;
 	
-	printf("When testing, f1 returns the value : %d\n", value1);
-	printf("When testing, f1 returns the value : %ld\n", best_value1);	
+	value1 = f1();
+	best_value1 = f1();
+	printf("When testing, f1 returns the value: %d\n", value1);
+	printf("When testing, f1 returns the value: %ld\n", best_value1);	
 }
 
 void test_f2() {
-	long best_value2 = f1();
+	long best_value2;
 	
-	printf("When testing, f2 returns the value : %ld\n", (long)f2(best_value2));
+	best_value2 = f1();
+	printf("When testing, f2 returns the value: %ld\n", (long)f2(best_value2));
 }
 
 int main() {
@@ -84,4 +87,3 @@ int main() {
 	
 	return 0;
 }
-
