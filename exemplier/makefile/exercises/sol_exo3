@@ -1,0 +1,19 @@
+CC=gcc
+CFLAGS=-Wall -Wextra -I/usr/local/opt/ncurses/include
+LDFLAGS=-L/usr/local/opt/ncurses/lib -lncurses
+OBJ=main.o worms.o helper.o
+
+all: worms
+
+worms: $(OBJS)
+	$(CC) $^ -o $@ $(LDFLAGS)
+main.o: main.c helper.h worms.h
+	$(CC) $(CFLAGS) -c $<
+worms.o: worms.c worms.h helper.h
+	$(CC) $(CFLAGS) -c $<
+helper.o: helper.c helper.h
+	$(CC) $(CFLAGS) -c $<
+clean: 
+	rm worms *.o
+
+.PHONY: all clean

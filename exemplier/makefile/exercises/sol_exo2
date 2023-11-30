@@ -1,0 +1,12 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -ansi -pedantic
+OBJ = gmotor.o util.o common.o
+
+gmotor: gmotor.o util.o common.o libmotor.a
+	$(CC) -o $@ $(OBJ) -lmotor
+gmotor.o: gmotor.c common.h util.h motor.h
+	$(CC) $(CFLAGS) -c $<
+util.o:	util.c util.h common.h
+	$(CC) $(CFLAGS) -c $<
+common.o: common.c common.h motor.h
+	$(CC) $(CFLAGS) -c $<

@@ -1,0 +1,10 @@
+CC = gcc # compilateur
+CFLAGS = -Wall -Wextra -ansi -pedantic # options de compilation
+OBJS = exo1.o erreur.o # liste des fichiers objets
+
+exo1 : $(OBJ) # règle de production finale
+	$(CC) $< -o $@
+exo1.o : exo1.c erreur.h
+	$(CC) $(CFLAGS) -c $^ -o $@
+erreur.o : erreur.c erreur.h
+	$(CC) $(CFLAGS) -c $^ -o $@
