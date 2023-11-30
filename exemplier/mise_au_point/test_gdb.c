@@ -8,29 +8,21 @@
  *
  * Chapter "Debugging, testing, profiling" / Chapitre "Mise au point"
  *
- * Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0 (1995)
- * @version   1.0.1 (2016)
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file testgdb.c
  * 
- * Testing \em f1() to use the GNU debugger.
+ * Testing f1() to use the GNU debugger.
  *
- * Compile with:
- * \code{.bash}
- * gcc -Wall -Wextra -ansi -pedantic -g test_gdb.c f.c -o test_gdb
- * \endcode
+ * Compile with: gcc -Wall -Wextra -ansi -pedantic -g test_gdb.c f.c -o test_gdb
  *
- * Run the debugger:
- * \code{.bash}
- * gdb ./test_gdb
- * \endcode
+ * Run the debugger: gdb ./test_gdb
+ *
+ * @author    Alain Lebret <alain.lebret@ensicaen.fr>
+ * @version   1.0 (1995)
+ * @version   1.0.1 (2016)
  */
 
 #include <stdio.h>
@@ -39,8 +31,9 @@
 #include "f.h"
 
 int main(void) {
-	int x = 3;
-
+	int x;
+	
+	x = 3;
 	f1(x);
 
 	exit(EXIT_SUCCESS);
