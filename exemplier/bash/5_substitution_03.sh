@@ -8,7 +8,7 @@
 # Unix System Programming Examples / Exemplier de programmation système Unix
 # "Shell bash" / "Interpréteur de commandes bash"
 #
-# Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,9 +23,20 @@
 # limitations under the License.
 #
 
-# Another simple script to show how to use substitution in a more complex command
+# This script demonstrates using command substitution to create a dynamically named tarball backup
 
-echo "Let BACKUP=./backup-\$(date +%d-%m-%y).tar.gz"
-BACKUP=./backup-$(date +%d-%m-%y).tar.gz
-echo "Then we can create automatically some tarball with a new date:"
-tar -czf "${BACKUP}" "$HOME/Desktop/os/courses/examples/shell"
+echo "Define BACKUP as ./backup-\$(date +%Y-%m-%d).tar.gz"
+BACKUP="./backup-$(date +%Y-%m-%d).tar.gz"
+echo "BACKUP filename is set to $BACKUP"
+
+SOURCE_DIR="$HOME/Desktop/os/courses/examples/shell"
+if [ -d "$SOURCE_DIR" ]; then
+    echo "Creating a tarball backup of $SOURCE_DIR"
+    if tar -czf "${BACKUP}" "$SOURCE_DIR"; then
+        echo "Backup successfully created at ${BACKUP}"
+    else
+        echo "Failed to create backup."
+    fi
+else
+    echo "Source directory $SOURCE_DIR does not exist. Backup not created."
+fi

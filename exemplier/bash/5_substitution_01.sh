@@ -8,7 +8,7 @@
 # Unix System Programming Examples / Exemplier de programmation système Unix
 # "Shell bash" / "Interpréteur de commandes bash"
 #
-# Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,10 +25,25 @@
 
 # A simple script to show the command substitution
 
+# Using backticks for command substitution
 COMMAND1=`ls`
+echo "Listing files using backticks:"
 echo "$COMMAND1"
 
-echo "It can also be done using:"
+echo ""
 
+# It is recommended to use $(...) for command substitution due to better readability and nesting ability
+echo "It can also be done using $(...):"
 COMMAND2=$(ls)
 echo "$COMMAND2"
+
+# Example of nested command substitution
+echo ""
+echo "Nested command substitution example:"
+COMMAND3=$(echo "Today is $(date +%A)")
+echo "$COMMAND3"
+
+# Checking if the command was successful
+if ! COMMAND4=$(ls non_existent_directory); then
+    echo "Failed to execute command"
+fi

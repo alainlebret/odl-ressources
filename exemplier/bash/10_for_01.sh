@@ -8,7 +8,7 @@
 # Unix System Programming Examples / Exemplier de programmation système Unix
 # "Shell bash" / "Interpréteur de commandes bash"
 #
-# Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,11 +23,14 @@
 # limitations under the License.
 #
 
-# A simple script to show loops
+# A script to demonstrate the use of a 'for' loop in Bash
 
-for languages in Java C Python Scala Caml R
-  do
-    echo "I like $languages"
-    sleep 1
-  done 
+# Looping through a list of programming languages
+echo "Listing my favorite programming languages:"
 
+for language in Java C Python Scala Caml R; do
+    echo "I like $language"
+    sleep 1  # Pausing for 1 second between each iteration for demonstration purposes
+  done
+
+echo "Loop completed."

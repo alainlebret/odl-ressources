@@ -8,7 +8,7 @@
 # Unix System Programming Examples / Exemplier de programmation système Unix
 # "Shell bash" / "Interpréteur de commandes bash"
 #
-# Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,11 +23,26 @@
 # limitations under the License.
 #
 
-# A simple script to show how to use functions. This one just displays a message.
-simple () {
-  echo "We are in a simple function."
-  echo "Now we exit!"
+#!/bin/bash
+
+# A script to demonstrate the use of functions in Bash
+
+# Function definition
+display_message () {
+  local message=$1  # Using a parameter within the function
+  echo "We are in the display_message function."
+  echo "Message: $message"
+  echo "Now we exit the function."
+  return 0  # Indicate successful execution
 } 
 
-# Calling the function is done with:
-simple 
+# Function call with a parameter
+echo "Calling the display_message function..."
+display_message "Hello from the function!"
+
+# Check the return status of the function
+if [ $? -eq 0 ]; then
+  echo "Function executed successfully."
+else
+  echo "Function execution failed."
+fi
