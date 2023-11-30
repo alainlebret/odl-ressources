@@ -1,0 +1,8 @@
+PROJECT_NAME     = "Mon projet"
+OUTPUT_DIRECTORY = dossier où créer les fichiers HTML
+INPUT            = (liste des fichiers à inclure (nominatif))
+FILE_PATTERNS    = *.h *.c (liste des fichiers à inclure par suffixe)
+EXCLUDE          = liste des fichiers à exclure (nominatif)
+GENERATE_HTML    = YES
+GENERATE_LATEX   = NO
+GENERATE_RTF     = NO
