@@ -8,22 +8,22 @@
  *
  * Chapter "Debugging, testing, profiling" / Chapitre "Mise au point"
  *
- * Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0 (1995)
- * @version   1.0.1 (2016)
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file test_traces.c
  * 
  * Using traces in a program.
+ *
+ * @author    Alain Lebret <alain.lebret@ensicaen.fr>
+ * @version   1.0 (1995)
+ * @version   1.0.1 (2016)
  */
+
 #include <stdio.h>
 #include <stdlib.h>
+
 #include "f.h"
 
 int main(void) {

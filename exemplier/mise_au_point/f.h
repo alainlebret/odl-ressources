@@ -8,20 +8,19 @@
  *
  * Chapter "Debugging, testing, profiling" / Chapitre "Mise au point"
  *
- * Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0 (1995)
- * @version   1.0.1 (2016)
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file f.h
  *
  * Examples to highlight using of the debugger, profiler, etc.
+ *
+ * @author    Alain Lebret <alain.lebret@ensicaen.fr>
+ * @version   1.0 (1995)
+ * @version   1.0.1 (2016)
  */
+
 #ifndef EXEMPLIER_F_H
 #define EXEMPLIER_F_H
 

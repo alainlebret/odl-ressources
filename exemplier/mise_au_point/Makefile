@@ -8,7 +8,7 @@
 #
 # Chapter "Debugging, testing, profiling" / Chapitre "Mise au point"
 #
-# Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 
 CC = gcc
@@ -46,3 +46,6 @@ test_rand : test_rand.o f.o
 
 clean :
 	rm -Rf *.o gmon.out gmon.txt $(EXEC) *.dSYM
+
+.PHONY: all clean
+

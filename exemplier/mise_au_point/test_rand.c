@@ -8,23 +8,22 @@
  *
  * Chapter "Debugging, testing, profiling" / Chapitre "Mise au point"
  *
- * Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0 (1995)
- * @version   1.0.1 (2016)
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file test_rand.c
  * 
- * Testing \em f4() with some random values.
+ * Testing f4() with some random values.
+ *
+ * @author    Alain Lebret <alain.lebret@ensicaen.fr>
+ * @version   1.0 (1995)
+ * @version   1.0.1 (2016)
  */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 #include "f.h"
 
 /**
@@ -36,7 +35,7 @@ void test(int min, int max) {
 
 	down_counter = max - min;
 
-	srand(time(0));
+	srand(time(NULL));
 
 	while (down_counter--) {
 		value = min + (int) ((max - min) * (double) rand() / RAND_MAX);
