@@ -1,0 +1,8 @@
+PROJECT_NAME     = "My great project"
+OUTPUT_DIRECTORY = doc
+INPUT            = skeleton.c
+FILE_PATTERNS    = *.h *.c
+EXCLUDE          = 
+GENERATE_HTML    = YES
+GENERATE_LATEX   = YES
+GENERATE_RTF     = YES
