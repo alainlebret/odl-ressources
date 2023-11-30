@@ -8,23 +8,19 @@
  *
  * Chapter "Compilation" / Chapitre "Compilation"
  *
- * Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0
- * @date      1995-2017
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file ex03_assembler.c
+ * @brief Testing program to highlight the assembling step. 
  *
- * Testing program to highlight the assembling step. Compile using option \c -S:
- * \code{.bash}
+ * Compile using option -S:
  * gcc -S ex03_assembler.c
- * \endcode
+ *
+ * @author Alain Lebret <alain.lebret@ensicaen.fr>
+ * @date 1995-2023
+ * @version 1.0
  */
 
 #define AUSTRIA_VOTING_AGE 16

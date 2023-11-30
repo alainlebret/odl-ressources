@@ -10,11 +10,11 @@
 #
 # Chapter "Compilation" / Chapitre "Compilation"
 #
-# Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 
 echo "Assembling step"
-﻿gcc -S ex03_assembler.c
+gcc -S ex03_assembler.c
 
 echo "The assembled file contains:"
 more ex03_assembler.s

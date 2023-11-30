@@ -8,24 +8,19 @@
  *
  * Chapter "Compilation" / Chapitre "Compilation"
  *
- * Copyright (C) 1995-2017 Alain Lebret (alain.lebret@ensicaen.fr)
- */
-
-
-/**
- * @author    Alain Lebret <alain.lebret@ensicaen.fr>
- * @version   1.0
- * @date      1995-2017
+ * Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
  */
 
 /**
  * @file ex02_macros.c
+ * @brief Testing program to highlight the precompiling step. 
  *
- * Testing program to highlight the precompiling step. Compile using option
- * \c -E:
- * \code{.bash}
+ * Compile using option -E:
  * gcc -E -Wall -Wextra -ansi -pedantic ex02_macros.c > ex02_macros.i
- * \endcode
+ *
+ * @author Alain Lebret <alain.lebret@ensicaen.fr>
+ * @date 1995-2023
+ * @version 1.0
  */
 
 #define AUSTRIA_VOTING_AGE 16
