@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -8,7 +8,7 @@
 # Unix System Programming Examples / Exemplier de programmation système Unix
 # "Shell bash" / "Interpréteur de commandes bash"
 #
-# Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,10 +26,12 @@
 # A simple script to show variables and their contents
 MESSAGE="Bonjour"
 message="bonjour"
+nom="Jean"
+PI="3.14159"  # Use . for decimal point
 
-echo "MESSAGE: " + MESSAGE
-echo "message: " + message
-echo "$MESSAGE: " + ${MESSAGE}
-echo "$message: " + ${message}
-echo "\$MESSAGE: " + ${MESSAGE}
-echo "\$message: " + ${message}
+echo "MESSAGE: $MESSAGE"
+echo "message: $message"
+echo "\$MESSAGE: ${MESSAGE}"
+echo "\$message: ${message}"
+
+printf "\nBonjour %s !\nSavez-vous que le nombre PI vaut %s ?\n\n" "$nom" "$PI"

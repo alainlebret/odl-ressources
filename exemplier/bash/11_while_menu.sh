@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -8,7 +8,7 @@
 # Unix System Programming Examples / Exemplier de programmation système Unix
 # "Shell bash" / "Interpréteur de commandes bash"
 #
-# Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,24 +23,35 @@
 # limitations under the License.
 #
 
-# A simple script to show how to use "while" loops to make a menu.
+# A script to demonstrate a simple interactive menu using a while loop
 
-clear ; boucle=y
-while [ ${boucle} = y ]
-  do
-    echo "Menu";  echo "===="
+clear
+continue_loop="y"
+while [ "$continue_loop" = "y" ]; do
+    echo "Menu"
+    echo "===="
     echo "D: Display the date"
     echo "U: Display connected users"
     echo "W: Display the path of the working directory"
     echo "Q: Quit"
     echo
-    read -s choix # silent mode with no echo
-    case $choix in
-      D|d) date ;;
-      U|u) who ;;
-      W|w) pwd ;;
-      Q|q) boucle=n ;;
-      *) echo "Not a valid choice!" ;;
-    esac
+
+    # Read user choice in silent mode
+    read -s -r choix
     echo
-  done 
+
+    # Process user choice
+    case "$choix" in
+        [Dd]) date ;;
+        [Uu]) who ;;
+        [Ww]) pwd ;;
+        [Qq]) continue_loop="n" ;;
+        *) echo "Not a valid choice! Try again." ;;
+    esac
+
+    echo
+    read -p "Press any key to continue..." -n 1 -s
+    clear
+done 
+
+echo "Exiting the menu. Goodbye!"

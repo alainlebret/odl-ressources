@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # ENSICAEN
@@ -8,7 +8,7 @@
 # Unix System Programming Examples / Exemplier de programmation système Unix
 # "Shell bash" / "Interpréteur de commandes bash"
 #
-# Copyright (C) 1995-2016 Alain Lebret (alain.lebret@ensicaen.fr)
+# Copyright (C) 1995-2023 Alain Lebret (alain.lebret@ensicaen.fr)
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -23,17 +23,18 @@
 # limitations under the License.
 #
 
-# A simple script to show how to use "while" loops.
+# A script using a while loop to calculate the sum of all numbers from 1 to a user-provided number
 
-echo -n "Enter a number: "; read number
+echo -n "Enter a positive number: "
+read -r number
 
 sum=0
 i=1
 
-while [ $i -le $number ]
-  do
-    let "sum=$sum+$i"
-    i=$i+1
-  done
-echo "Sum from 1 to $number is equals to: $sum"
+# Calculate the sum
+while [ "$i" -le "$number" ]; do
+  sum=$((sum + i))
+  i=$((i + 1))
+done
 
+echo "The sum from 1 to $number is: $sum"
