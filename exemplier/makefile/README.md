@@ -33,14 +33,7 @@ Compile files as follows:
 Note :
 
 By compiling with the `-I.` option, you add the current directory ( `.`) to
-the list of paths where the precompiler can find header files. The inclusion
-of `matrix.h` can then be achieved by:
-
-    #include <matrix.h>
-
-instead of:
-
-    #include "matrix.h"
+the list of paths where the precompiler can find header files.
 
 ### v3
 --------------------------------------------------------------------------------
