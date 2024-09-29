@@ -1,4 +1,4 @@
-# Ressources pour les TP ODL FISA
+# Ressources "Outils de développement logiciel" en INFO 1re année FISA
 
 ## Éditeurs
 
@@ -15,7 +15,7 @@
 
 - TP n°1 : prise en main du terminal (2h)
 - TP n°2 : édition avec _Vim_ (2h)
-- TP n°3 : programmation de scripts _shell_ (2h)
+- TP n°3 : programmation de scripts _shell_ (4h)
 - TP n°4 : mise en oeuvre de _gcc_ (2h)
 - TP n°5 : débogage avec _gdb_ (2h)
 - TP n°6 : tests unitaires avec _MinUnit_ (2h)
