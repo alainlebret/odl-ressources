@@ -1,0 +1,11 @@
+Tumor protein p53, also known as p53, cellular tumor antigen p53 (UniProt
+name), phosphoprotein p53, tumor suppressor p53, antigen NY-CO-13, or
+transformation-related protein 53 (TRP53), is any isoform of a protein
+encoded by homologous genes in various organisms, such as TP53 (humans)
+and Trp53 (mice). This homolog (originally thought to be, and often spoken
+of as, a single protein) is crucial in multicellular organisms, where it
+prevents cancer formation, thus, functions as a tumor suppressor. As such,
+p53 has been described as "the guardian of the genome" because of its role
+in conserving stability by preventing genome mutation.
+Hence TP53 is classified as a tumor suppressor gene. (Italics are used to
+denote the TP53 gene name and distinguish it from the protein it encodes.)
