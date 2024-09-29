@@ -1,6 +1,8 @@
 # Ressources "Outils de développement logiciel"
 ## *1A INFO FISA*
 
+---
+
 ## Éditeurs
 
 ### _Vim_
