@@ -59,6 +59,6 @@ double *get_double_column(char *filename, int column, const char * delimiter);
  *
  * @return The integer values.
  */
-void *get_int_column(char *filename, int column, const char * delimiter);
+int *get_int_column(char *filename, int column, const char * delimiter);
 
 #endif /* UTIL_CSV_H */
