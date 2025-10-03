@@ -48,14 +48,12 @@ double mean_angle(double angles[], int size) {
  */
 int main (void) {
 	double angle_set1[] = { 350, 10 };
-	double angle_set2[] = { 90, 180, 270, 360 };
-	double angle_set3[] = { 10, 20, 30 };
-	double angle_set4[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
+	double angle_set2[] = { 10, 20, 30 };
+	double angle_set3[] = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 };
  
 	printf("\nMean angle for 1st set: %.2f degrees", mean_angle(angle_set1, 2));
-	printf("\nMean angle for 2nd set: %.2f degrees", mean_angle(angle_set2, 4));
-	printf("\nMean angle for 3rd set: %.2f degrees", mean_angle(angle_set3, 3));
-	printf("\nMean angle for 4th set: %.2f degrees\n", mean_angle(angle_set4, 10));
+	printf("\nMean angle for 2nd set: %.2f degrees", mean_angle(angle_set2, 3));
+	printf("\nMean angle for 3rd set: %.2f degrees", mean_angle(angle_set3, 10));
 
 	return 0;
 }
