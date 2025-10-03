@@ -87,7 +87,7 @@ double *get_double_column(char *filename, int column, const char *delimiters) {
     return data;
 }
 
-void *get_int_column(char *filename, int column, const char *delimiters) {
+int *get_int_column(char *filename, int column, const char *delimiters) {
     FILE *fp;
     int *data;
     char buf[1024];
