@@ -23,7 +23,7 @@
 
 int number_of_rows(char *filename) {
     FILE *fp;
-    char c;
+    int c;
     int row_count;
 
     fp = fopen(filename, "r");

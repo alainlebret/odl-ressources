@@ -27,12 +27,36 @@ uselibf_d: $(SRC_DIR)/main.o $(LIB_DIR)/libf.so
 	$(CC) $< -o $(BIN_DIR)/$@ $(LDFLAGS)
 
 # ---------------------------------- TESTS ------------------------------------
-tests: $(BIN_TESTS_DIR)/test_f1f2f3f4
+tests: $(BIN_TESTS_DIR)/test_f1f2f3f4 $(BIN_TESTS_DIR)/test_f1 $(BIN_TESTS_DIR)/test_f2 $(BIN_TESTS_DIR)/test_f3 $(BIN_TESTS_DIR)/test_f4
 
 $(BIN_TESTS_DIR)/test_f1f2f3f4: $(SRC_TESTS_DIR)/test_f1f2f3f4.o $(SRC_LIB_DIR)/f1.o $(SRC_LIB_DIR)/f2.o $(SRC_LIB_DIR)/f3.o $(SRC_LIB_DIR)/f4.o
 	$(CC) $^ -o $@
 
 $(SRC_TESTS_DIR)/test_f1f2f3f4.o: $(SRC_TESTS_DIR)/test_f1f2f3f4.c $(INC_DIR)/f.h
+	$(CC) $(CPPFLAGS) $(CFLAGS_TESTS) $< -o $@ -c
+
+$(BIN_TESTS_DIR)/test_f1: $(SRC_TESTS_DIR)/test_f1.o $(SRC_LIB_DIR)/f1.o
+	$(CC) $^ -o $@
+
+$(BIN_TESTS_DIR)/test_f2: $(SRC_TESTS_DIR)/test_f2.o $(SRC_LIB_DIR)/f2.o
+	$(CC) $^ -o $@
+
+$(BIN_TESTS_DIR)/test_f3: $(SRC_TESTS_DIR)/test_f3.o $(SRC_LIB_DIR)/f3.o
+	$(CC) $^ -o $@
+
+$(BIN_TESTS_DIR)/test_f4: $(SRC_TESTS_DIR)/test_f4.o $(SRC_LIB_DIR)/f4.o
+	$(CC) $^ -o $@
+
+$(SRC_TESTS_DIR)/test_f1.o: $(SRC_TESTS_DIR)/test_f1.c $(INC_DIR)/f.h
+	$(CC) $(CPPFLAGS) $(CFLAGS_TESTS) $< -o $@ -c
+
+$(SRC_TESTS_DIR)/test_f2.o: $(SRC_TESTS_DIR)/test_f2.c $(INC_DIR)/f.h
+	$(CC) $(CPPFLAGS) $(CFLAGS_TESTS) $< -o $@ -c
+
+$(SRC_TESTS_DIR)/test_f3.o: $(SRC_TESTS_DIR)/test_f3.c $(INC_DIR)/f.h
+	$(CC) $(CPPFLAGS) $(CFLAGS_TESTS) $< -o $@ -c
+
+$(SRC_TESTS_DIR)/test_f4.o: $(SRC_TESTS_DIR)/test_f4.c $(INC_DIR)/f.h
 	$(CC) $(CPPFLAGS) $(CFLAGS_TESTS) $< -o $@ -c
 	
 # --------------------------------- LIBRARIES ---------------------------------
@@ -69,5 +93,5 @@ cleandoc:
 	$(RM) -r doc/*
 
 distclean: clean cleandoc
-	$(RM) $(BIN_TESTS_DIR)/test_f1f2f3f4 $(BIN_DIR)/uselibf_s $(BIN_DIR)/uselibf_d $(LIB_DIR)/*.*
+	$(RM) $(BIN_TESTS_DIR)/test_f1f2f3f4 $(BIN_TESTS_DIR)/test_f1 $(BIN_TESTS_DIR)/test_f2 $(BIN_TESTS_DIR)/test_f3 $(BIN_TESTS_DIR)/test_f4 $(BIN_DIR)/uselibf_s $(BIN_DIR)/uselibf_d $(LIB_DIR)/*.*
 
